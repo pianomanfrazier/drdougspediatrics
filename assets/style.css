@@ -85,5 +85,22 @@ img {
     justify-content: flex-end;
 }
 #mapid {
-    height: 300px;
+    /* height:300px; */
+    min-width: 100px;
+    min-height: 300px;
+}
+.map-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+@media only screen and (max-width: 768px) {
+    .map-container {
+        grid-template-columns: 1fr;
+    }
+    .map-container .map-item {
+        width: 100vw;
+    }
+}
+.map-container .map-item {
+    width: 100%;
 }
