@@ -4,6 +4,15 @@ body {
 a {
     color: orange;
 }
+.link.btn {
+    border: 0;
+    background-color: none;
+    background: none;
+    padding: 12px 18px;
+    background: teal;
+    color: white;
+    border-radius: 4px;
+}
 section {
     max-width: 45em;
     padding: 1em;
