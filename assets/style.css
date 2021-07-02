@@ -13,6 +13,9 @@ a {
     color: white;
     border-radius: 4px;
 }
+.link.btn:hover {
+    opacity: 0.9;
+}
 section {
     max-width: 45em;
     padding: 1em;
@@ -101,6 +104,8 @@ img {
 .map-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-width: 90em;
+    margin: auto;
 }
 @media only screen and (max-width: 768px) {
     .map-container {
