@@ -75,7 +75,14 @@ img {
 } 
 .section {
     width: 100%;
-    columns: 2 400px;
+    /* columns: 2 400px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+@media only screen and (max-width: 1000px) {
+    .section {
+        grid-template-columns: 1fr;
+    }
 }
 .section .content {
     max-width: 35em;
