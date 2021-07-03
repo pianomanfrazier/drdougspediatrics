@@ -1,9 +1,6 @@
 body {
     /* background-color: teal; */
 }
-a {
-    color: orange;
-}
 .link.btn {
     border: 0;
     background-color: none;
@@ -16,10 +13,19 @@ a {
 .link.btn:hover {
     opacity: 0.9;
 }
-section {
-    max-width: 45em;
-    padding: 1em;
-    margin: auto;
+.quick-nav {
+    text-align: center;
+}
+.quick-nav a {
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+}
+a svg {
+    padding-right: 0.7em;
 }
 h1 {
     text-align: center;
@@ -53,21 +59,6 @@ nav li {
 .hero {
     text-align: center;
 }
-.blob1 {
-    mask-image: url(/assets/images/blob1.svg);
-    mask-size: 75%;
-}
-.blob2 {
-    mask-image: url(/assets/images/blob2.svg);
-    mask-size: 80%;
-}
-.blob3 {
-    mask-image: url(/assets/images/blob3.svg);
-    mask-size: 100%;
-}
-.blob4 {
-    mask-image: url(/assets/images/blob4.svg);
-}
 img {
     mask-repeat: no-repeat;
     mask-position: center;
@@ -90,11 +81,37 @@ img {
     display: inline-block;
     width: 100%;
 } 
+.section > *{
+    padding: 1em;
+    margin: 1em 0;
+}
+.section {
+    margin: 3em 0;
+}
 .flex {
     display: flex;
 }
+.items-center {
+    align-items: center;
+}
 .flex-end {
     justify-content: flex-end;
+}
+.content-between {
+    justify-content: space-between;
+}
+.bg-teal {
+    background-color: teal;
+}
+.text-white * {
+    color: white;
+}
+.top-bar a {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
 }
 #mapid {
     /* height:300px; */
