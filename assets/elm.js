@@ -5948,5 +5948,265 @@ var $author$project$NewPatientForm$view = function (model) {
 };
 var $author$project$NewPatientForm$main = $elm$browser$Browser$element(
 	{init: $author$project$NewPatientForm$init, subscriptions: $author$project$NewPatientForm$subscriptions, update: $author$project$NewPatientForm$update, view: $author$project$NewPatientForm$view});
-_Platform_export({'NewPatientForm':{'init':$author$project$NewPatientForm$main(
+var $author$project$MrGoldenSun$init = function (_v0) {
+	return _Utils_Tuple2(
+		{count: 0},
+		$elm$core$Platform$Cmd$none);
+};
+var $author$project$MrGoldenSun$subscriptions = function (_v0) {
+	return $elm$core$Platform$Sub$none;
+};
+var $author$project$MrGoldenSun$update = F2(
+	function (msg, model) {
+		return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
+	});
+var $elm$svg$Svg$trustedNode = _VirtualDom_nodeNS('http://www.w3.org/2000/svg');
+var $elm$svg$Svg$circle = $elm$svg$Svg$trustedNode('circle');
+var $elm$svg$Svg$Attributes$cx = _VirtualDom_attribute('cx');
+var $elm$svg$Svg$Attributes$cy = _VirtualDom_attribute('cy');
+var $elm$svg$Svg$Attributes$d = _VirtualDom_attribute('d');
+var $elm$svg$Svg$Attributes$fill = _VirtualDom_attribute('fill');
+var $elm$svg$Svg$g = $elm$svg$Svg$trustedNode('g');
+var $elm$svg$Svg$Attributes$height = _VirtualDom_attribute('height');
+var $elm$svg$Svg$Attributes$id = _VirtualDom_attribute('id');
+var $elm$svg$Svg$path = $elm$svg$Svg$trustedNode('path');
+var $elm$svg$Svg$Attributes$r = _VirtualDom_attribute('r');
+var $elm$svg$Svg$Attributes$points = _VirtualDom_attribute('points');
+var $elm$svg$Svg$polygon = $elm$svg$Svg$trustedNode('polygon');
+var $elm$svg$Svg$Attributes$transform = _VirtualDom_attribute('transform');
+var $author$project$MrGoldenSun$smallSpike = function (angle) {
+	return A2(
+		$elm$svg$Svg$polygon,
+		_List_fromArray(
+			[
+				$elm$svg$Svg$Attributes$points('90, 50 110, 50 100, 40'),
+				$elm$svg$Svg$Attributes$transform(
+				'rotate(' + ($elm$core$String$fromInt(angle) + ', 100, 100)'))
+			]),
+		_List_Nil);
+};
+var $elm$svg$Svg$Attributes$strokeLinecap = _VirtualDom_attribute('stroke-linecap');
+var $elm$svg$Svg$Attributes$strokeLinejoin = _VirtualDom_attribute('stroke-linejoin');
+var $elm$svg$Svg$Attributes$strokeWidth = _VirtualDom_attribute('stroke-width');
+var $author$project$MrGoldenSun$sunSpot = function (angle) {
+	return A2(
+		$elm$svg$Svg$circle,
+		_List_fromArray(
+			[
+				$elm$svg$Svg$Attributes$r('3'),
+				$elm$svg$Svg$Attributes$cx('100'),
+				$elm$svg$Svg$Attributes$cy('20'),
+				$elm$svg$Svg$Attributes$transform(
+				'rotate(' + ($elm$core$String$fromInt(angle) + ', 100, 100)'))
+			]),
+		_List_Nil);
+};
+var $elm$svg$Svg$svg = $elm$svg$Svg$trustedNode('svg');
+var $author$project$MrGoldenSun$tallSpike = function (angle) {
+	return A2(
+		$elm$svg$Svg$polygon,
+		_List_fromArray(
+			[
+				$elm$svg$Svg$Attributes$points('95, 50 105, 50 100, 30'),
+				$elm$svg$Svg$Attributes$transform(
+				'rotate(' + ($elm$core$String$fromInt(angle) + ', 100, 100)'))
+			]),
+		_List_Nil);
+};
+var $elm$svg$Svg$Attributes$viewBox = _VirtualDom_attribute('viewBox');
+var $elm$svg$Svg$Attributes$width = _VirtualDom_attribute('width');
+var $author$project$MrGoldenSun$mrSun = A2(
+	$elm$svg$Svg$svg,
+	_List_fromArray(
+		[
+			$elm$svg$Svg$Attributes$width('200'),
+			$elm$svg$Svg$Attributes$height('200'),
+			$elm$svg$Svg$Attributes$viewBox('0 0 200 200'),
+			$elm$svg$Svg$Attributes$fill('#ffe680'),
+			$elm$svg$Svg$Attributes$strokeWidth('4'),
+			$elm$svg$Svg$Attributes$strokeLinecap('round'),
+			$elm$svg$Svg$Attributes$strokeLinejoin('round'),
+			$elm$svg$Svg$Attributes$id('mr-golden-sun')
+		]),
+	_List_fromArray(
+		[
+			A2(
+			$elm$svg$Svg$g,
+			_List_fromArray(
+				[
+					$elm$svg$Svg$Attributes$id('sun-face'),
+					$elm$svg$Svg$Attributes$transform('rotate(10, 100, 100)')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$svg$Svg$circle,
+					_List_fromArray(
+						[
+							$elm$svg$Svg$Attributes$r('45'),
+							$elm$svg$Svg$Attributes$cx('100'),
+							$elm$svg$Svg$Attributes$cy('100')
+						]),
+					_List_Nil),
+					A2(
+					$elm$svg$Svg$path,
+					_List_fromArray(
+						[
+							$elm$svg$Svg$Attributes$transform('rotate(180, 100, 100)'),
+							$elm$svg$Svg$Attributes$d('M105 110s3 4 8 4 8-4 8-4')
+						]),
+					_List_Nil),
+					A2(
+					$elm$svg$Svg$path,
+					_List_fromArray(
+						[
+							$elm$svg$Svg$Attributes$transform('rotate(180, 100, 100)'),
+							$elm$svg$Svg$Attributes$d('M80 110s3 4 8 4 8-4 8-4')
+						]),
+					_List_Nil),
+					A2(
+					$elm$svg$Svg$path,
+					_List_fromArray(
+						[
+							$elm$svg$Svg$Attributes$d('M92 110s3 4 8 4 8-4 8-4')
+						]),
+					_List_Nil)
+				])),
+			A2(
+			$elm$svg$Svg$g,
+			_List_fromArray(
+				[
+					$elm$svg$Svg$Attributes$id('sun-outer')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$svg$Svg$g,
+					_List_fromArray(
+						[
+							$elm$svg$Svg$Attributes$id('sun-spikes')
+						]),
+					_List_fromArray(
+						[
+							A2(
+							$elm$svg$Svg$g,
+							_List_fromArray(
+								[
+									$elm$svg$Svg$Attributes$id('small-spikes')
+								]),
+							A2(
+								$elm$core$List$map,
+								$author$project$MrGoldenSun$smallSpike,
+								A2(
+									$elm$core$List$map,
+									function (x) {
+										return x * 60;
+									},
+									A2($elm$core$List$range, 0, 5)))),
+							A2(
+							$elm$svg$Svg$g,
+							_List_fromArray(
+								[
+									$elm$svg$Svg$Attributes$id('tall-spikes')
+								]),
+							A2(
+								$elm$core$List$map,
+								$author$project$MrGoldenSun$tallSpike,
+								A2(
+									$elm$core$List$map,
+									function (x) {
+										return (x * 60) + 30;
+									},
+									A2($elm$core$List$range, 0, 5))))
+						])),
+					A2(
+					$elm$svg$Svg$g,
+					_List_fromArray(
+						[
+							$elm$svg$Svg$Attributes$id('circles')
+						]),
+					A2(
+						$elm$core$List$map,
+						$author$project$MrGoldenSun$sunSpot,
+						A2(
+							$elm$core$List$map,
+							function (x) {
+								return (x * 60) + 15;
+							},
+							A2($elm$core$List$range, 0, 5))))
+				]))
+		]));
+var $author$project$MrGoldenSun$view = function (model) {
+	return $author$project$MrGoldenSun$mrSun;
+};
+var $author$project$MrGoldenSun$main = $elm$browser$Browser$element(
+	{init: $author$project$MrGoldenSun$init, subscriptions: $author$project$MrGoldenSun$subscriptions, update: $author$project$MrGoldenSun$update, view: $author$project$MrGoldenSun$view});
+var $author$project$HistoryForm$init = function (_v0) {
+	return _Utils_Tuple2(
+		{count: 0},
+		$elm$core$Platform$Cmd$none);
+};
+var $author$project$HistoryForm$subscriptions = function (_v0) {
+	return $elm$core$Platform$Sub$none;
+};
+var $author$project$HistoryForm$update = F2(
+	function (msg, model) {
+		if (msg.$ === 'Increment') {
+			return _Utils_Tuple2(
+				_Utils_update(
+					model,
+					{count: model.count + 1}),
+				$elm$core$Platform$Cmd$none);
+		} else {
+			return _Utils_Tuple2(
+				_Utils_update(
+					model,
+					{count: model.count - 1}),
+				$elm$core$Platform$Cmd$none);
+		}
+	});
+var $author$project$HistoryForm$Decrement = {$: 'Decrement'};
+var $author$project$HistoryForm$Increment = {$: 'Increment'};
+var $elm$html$Html$button = _VirtualDom_node('button');
+var $author$project$HistoryForm$view = function (model) {
+	return A2(
+		$elm$html$Html$div,
+		_List_Nil,
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$button,
+				_List_fromArray(
+					[
+						$elm$html$Html$Events$onClick($author$project$HistoryForm$Increment)
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('+1')
+					])),
+				A2(
+				$elm$html$Html$div,
+				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$text(
+						$elm$core$String$fromInt(model.count))
+					])),
+				A2(
+				$elm$html$Html$button,
+				_List_fromArray(
+					[
+						$elm$html$Html$Events$onClick($author$project$HistoryForm$Decrement)
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('-1')
+					]))
+			]));
+};
+var $author$project$HistoryForm$main = $elm$browser$Browser$element(
+	{init: $author$project$HistoryForm$init, subscriptions: $author$project$HistoryForm$subscriptions, update: $author$project$HistoryForm$update, view: $author$project$HistoryForm$view});
+_Platform_export({'HistoryForm':{'init':$author$project$HistoryForm$main(
+	$elm$json$Json$Decode$succeed(_Utils_Tuple0))(0)},'NewPatientForm':{'init':$author$project$NewPatientForm$main(
+	$elm$json$Json$Decode$succeed(_Utils_Tuple0))(0)},'MrGoldenSun':{'init':$author$project$MrGoldenSun$main(
 	$elm$json$Json$Decode$succeed(_Utils_Tuple0))(0)}});}(this));
