@@ -138,7 +138,7 @@ h1 {
     animation-duration: 300s;
 }
 #cloud4 {
-    left: -10vw;
+    left: -15em;
     top: 2em;
     z-index: 2;
     animation-name: cloud4;
@@ -150,7 +150,7 @@ h1 {
 }
 /* LARGE CLOUD */
 #cloud5 {
-    left: -30vw;
+    left: -22em;
     top: 5em;
     z-index: 3;
     animation-name: cloud5;
@@ -162,7 +162,7 @@ h1 {
 }
 /* SMALL CLOUD */
 #cloud6 {
-    left: -10vw;
+    left: -15em;
     top: 0;
     z-index: 1;
     animation-name: cloud6;
@@ -209,7 +209,7 @@ h1 {
 }
 @keyframes cloud4 {
     from {
-        left: -10vw;
+        left: -15em;
     }
     to {
         left: 100vw;
@@ -217,7 +217,7 @@ h1 {
 }
 @keyframes cloud5 {
     from {
-        left: -30vw;
+        left: -22em;
     }
     to {
         left: 100vw;
@@ -225,7 +225,7 @@ h1 {
 }
 @keyframes cloud6 {
     from {
-        left: -10vw;
+        left: -15em;
     }
     to {
         left: 100vw;
