@@ -333,7 +333,7 @@ nav a:hover {
 }
 /* BUBBLE BORDER */
 .bubbles {
-    padding: 12em 0;
+    padding: 16em 0;
     position: relative;
     background: var(--color-blue);
 }
@@ -343,8 +343,7 @@ nav a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 192px;
-    /* background: #000; */
+    height: 250px;
     background: url(./bubbles-inverse-flipped.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -355,20 +354,19 @@ nav a:hover {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 192px;
-    /* background: #000; */
+    height: 300px;
     background: url(./bubbles-inverse.png);
     background-size: cover;
     background-repeat: repeat;
 }
 
 /* FLOATING BUBBLE BORDER */
-.bubbles2{
+.bubbles2 {
     position: relative;
     background-color: var(--color-teal);
     padding: 12em 0;
-    padding-top: 372px;
-    padding-bottom: 372px;
+    padding-top: 600px;
+    padding-bottom: 600px;
 }
 .bubbles2:before {
     content: '';
@@ -376,11 +374,9 @@ nav a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 395px;
-    /* background: #000; */
+    height: 600px;
     background: url(./bubbles2-inverse.png);
-    /* background-size: cover; */
-    background-repeat: repeat;
+    background-size: cover;
 }
 .bubbles2:after {
     content: '';
@@ -388,11 +384,34 @@ nav a:hover {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 372px;
-    /* background: #000; */
+    height: 600px;
     background: url(./bubbles2-inverse-flipped.png);
     background-size: cover;
-    background-repeat: no-repeat;
+}
+
+.bumps {
+    position: relative;
+    padding-top: 50px;
+}
+.bumps:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: url(./bumps.png);
+    background-size: cover;
+}
+.bumps:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: url(./bumps-inverse.png);
+    background-size: cover;
 }
 
 
