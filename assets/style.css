@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&family=Roboto&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&family=Roboto&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@900&family=Roboto&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Rammetto+One&family=Roboto&display=swap'); */
 /* COLORS */
 :root {
     --color-grey: #556370;
@@ -36,7 +38,7 @@ p {
     line-height: 1.6rem;
 }
 h1, h2, h3, h4 {
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Catamaran", sans-serif;
     font-weight: 700;
 }
 h1 {
