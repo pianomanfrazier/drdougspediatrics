@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="mr-golden-sun" width="200" height="200" fill="#ffe680" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" version="1.1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <rect x="5" y="5" rx="30" stroke-width="15" width="185" height="185" fill="#ffe680"></rect><g id="sun-face" transform="scale(3) translate(-67 -67)"><path transform="rotate(180, 100, 100)" d="M105 110s3 4 8 4 8-4 8-4"></path><path transform="rotate(180, 100, 100)" d="M80 110s3 4 8 4 8-4 8-4"></path><path d="M92 110s3 4 8 4 8-4 8-4"></path></g>
+</svg>

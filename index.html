@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
         integrity="sha256-t2/7smZfgrST4FS1DT0bs/KotCM74XlcqZN5Vu7xlrw=" crossorigin="anonymous" />
     <link rel="stylesheet" href="/assets/style.css">
-    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+    <link rel="shortcut icon" href="/assets/images/favicon.svg">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin="" />
@@ -159,10 +159,10 @@
 
     <nav>
         <ul>
-            <li><a href="#drdoug">About Dr. Doug</a></li>
-            <li><a href="#about">About The Office</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#services">Services & Procedures</a></li>
+            <li><a class="hover-purple" href="#drdoug">About Dr. Doug</a></li>
+            <li><a class="hover-teal" href="#about">About The Office</a></li>
+            <li><a class="hover-red" href="#faq">FAQ</a></li>
+            <li><a class="hover-yellow" href="#services">Services & Procedures</a></li>
         </ul>
     </nav>
 
@@ -216,13 +216,33 @@
         <section>
             <h2 id="services" class="text-center">Services & Procedures</h2>
 
-            <img height="200" width="200" src="/assets/images/isodry.jpg" alt="">
-            <p>We use the revolutionary Isolite or Isodry system which aids in providing a more comfortable, effective and time saving dental procedure.</p>
+            <div class="products text-center">
+                <div>
+                    <img height="300" width="300" src="/assets/images/isodry.jpg" alt="">
+                    <div>
+                        <p>We use the revolutionary Isolite or Isodry system which aids in providing a more comfortable, effective and time saving dental procedure.</p>
+                    </div>
+                </div>
 
-            <img height="200" width="200" src="/assets/images/anydose.jpg" alt="">
-            <p>We don't have to numb our patients for many of our procedures. However, when we do, we use our amazing AnutraMedical buffered anesthetic system. It provided a less painful, more comfortable numbing experience. Buffered anesthetic has been clinically shown to provide less painful, faster acting and more profound anesthesia. A true game changer for our patients who need to get numb. </p>
+                <div>
+                    <img height="300" width="300" src="/assets/images/anydose.jpg" alt="">
+                    <div>
+                        <p>We don't have to numb our patients for many of our procedures. However, when we do, we use our amazing AnutraMedical buffered anesthetic system. It provided a less painful, more comfortable numbing experience. Buffered anesthetic has been clinically shown to provide less painful, faster acting and more profound anesthesia. A true game changer for our patients who need to get numb. </p>
+                    </div>
+                </div>
+            </div>
 
-            <img src="/assets/images/logan-regional.png" alt="">
+            <div class="mx-2">
+                <img class="m-auto block" width="100%" src="/assets/images/logan-regional.png" alt="">
+                <div class="measure m-auto text-center">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam autem libero repellat consectetur repellendus ipsum minima necessitatibus ullam animi pariatur commodi, ipsam unde similique numquam quos perferendis saepe placeat expedita!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit incidunt esse laboriosam nemo enim ipsa magni quidem vero eligendi non molestias totam tempora eaque quisquam quaerat tempore aspernatur accusantium, repellat quibusdam doloribus pariatur. Dolore aliquid reiciendis sed voluptate temporibus accusantium. Praesentium laboriosam non alias. A ea doloremque sunt aperiam aliquid hic asperiores itaque ad nemo sapiente. Sint amet atque quaerat, quisquam quasi incidunt culpa ex aspernatur ipsum, ad, dignissimos distinctio quo. Ut placeat expedita nisi dolores eveniet impedit in repellendus laborum amet magni alias adipisci laudantium similique, beatae doloribus odit sed? Corporis enim culpa doloribus architecto sit, est aperiam a.
+                    </p>
+                </div>
+            </div>
         </section>
 
 
@@ -304,7 +324,7 @@
                 </li>
             </ul>
             <ul>
-                <li>
+                <li class="address">
                     Dr. Doug's Pediatric Dentistry<br>
                     1250 N 211 E, Suite 110<br>
                     Logan, UT 84341

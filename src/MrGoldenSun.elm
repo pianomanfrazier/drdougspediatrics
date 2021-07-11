@@ -3,7 +3,7 @@ module MrGoldenSun exposing (..)
 import Browser
 import Html exposing (Html, button, div, text)
 import Html.Events exposing (onClick)
-import Svg exposing (circle, ellipse, g, path, polygon, svg)
+import Svg exposing (circle, ellipse, g, path, polygon, svg, rect)
 import Svg.Attributes as SA
 
 
@@ -81,6 +81,7 @@ mrSun =
         , SA.height "200"
         , SA.viewBox "0 0 200 200"
         , SA.fill "#ffe680"
+        , SA.stroke "#333"
         , SA.strokeWidth "4"
         , SA.strokeLinecap "round"
         , SA.strokeLinejoin "round"
@@ -113,6 +114,30 @@ mrSun =
                     |> List.map (\x -> x * 60 + 15)
                     |> List.map sunSpot
                 )
+            ]
+        ]
+
+mrSunFavicon : Html Msg
+mrSunFavicon = 
+    svg
+        [ SA.width "200"
+        , SA.height "200"
+        , SA.viewBox "0 0 200 200"
+        , SA.fill "#ffe680"
+        , SA.stroke "#333"
+        , SA.strokeWidth "4"
+        , SA.strokeLinecap "round"
+        , SA.strokeLinejoin "round"
+        , SA.id "mr-golden-sun"
+        ]
+        [ rect [ SA.x "5", SA.y "5", SA.rx "30", SA.strokeWidth "15", SA.width "185", SA.height "185", SA.fill "#ffe680"] []
+        , g
+            [ SA.id "sun-face"
+            , SA.transform "scale(3) translate(-67 -67)"
+            ]
+            [ path [ SA.transform "rotate(180, 100, 100)", SA.d "M105 110s3 4 8 4 8-4 8-4" ] []
+            , path [ SA.transform "rotate(180, 100, 100)", SA.d "M80 110s3 4 8 4 8-4 8-4" ] []
+            , path [ SA.d "M92 110s3 4 8 4 8-4 8-4" ] []
             ]
         ]
 
