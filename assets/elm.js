@@ -5150,17 +5150,47 @@ var $author$project$NewPatientForm$Model = function (firstName) {
 			return function (preferredName) {
 				return function (dob) {
 					return function (gender) {
-						return function (fatherName) {
-							return function (fatherDob) {
-								return function (fatherPhone) {
-									return function (motherName) {
-										return function (motherDob) {
-											return function (motherPhone) {
-												return function (street) {
-													return function (city) {
-														return function (state) {
-															return function (zip) {
-																return {city: city, dob: dob, fatherDob: fatherDob, fatherName: fatherName, fatherPhone: fatherPhone, firstName: firstName, gender: gender, lastName: lastName, midName: midName, motherDob: motherDob, motherName: motherName, motherPhone: motherPhone, preferredName: preferredName, state: state, street: street, zip: zip};
+						return function (sameAsGuardian) {
+							return function (fatherName) {
+								return function (fatherDob) {
+									return function (fatherPhone) {
+										return function (motherName) {
+											return function (motherDob) {
+												return function (motherPhone) {
+													return function (street) {
+														return function (city) {
+															return function (state) {
+																return function (zip) {
+																	return function (sameAsInsurance) {
+																		return function (policyHolder) {
+																			return function (policyDob) {
+																				return function (policySsn) {
+																					return function (policyRelationship) {
+																						return function (policyRelationshipPhone) {
+																							return function (policyEmployer) {
+																								return function (policyCompany) {
+																									return function (policyPhone) {
+																										return function (policyStreet) {
+																											return function (policyCity) {
+																												return function (policyZip) {
+																													return function (policyID) {
+																														return function (policyGroup) {
+																															return {city: city, dob: dob, fatherDob: fatherDob, fatherName: fatherName, fatherPhone: fatherPhone, firstName: firstName, gender: gender, lastName: lastName, midName: midName, motherDob: motherDob, motherName: motherName, motherPhone: motherPhone, policyCity: policyCity, policyCompany: policyCompany, policyDob: policyDob, policyEmployer: policyEmployer, policyGroup: policyGroup, policyHolder: policyHolder, policyID: policyID, policyPhone: policyPhone, policyRelationship: policyRelationship, policyRelationshipPhone: policyRelationshipPhone, policySsn: policySsn, policyStreet: policyStreet, policyZip: policyZip, preferredName: preferredName, sameAsGuardian: sameAsGuardian, sameAsInsurance: sameAsInsurance, state: state, street: street, zip: zip};
+																														};
+																													};
+																												};
+																											};
+																										};
+																									};
+																								};
+																							};
+																						};
+																					};
+																				};
+																			};
+																		};
+																	};
+																};
 															};
 														};
 													};
@@ -5182,8 +5212,8 @@ var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
 var $author$project$NewPatientForm$init = function (_v0) {
 	return _Utils_Tuple2(
-		$author$project$NewPatientForm$Model('')('')('')('')('')($elm$core$Maybe$Nothing)('')('')('')('')('')('')('')('')(
-			$elm$core$Maybe$Just($Chadtech$elm_us_state_abbreviations$UsStates$UT))(''),
+		$author$project$NewPatientForm$Model('')('')('')('')('')($elm$core$Maybe$Nothing)('')('')('')('')('')('')('')('')('')(
+			$elm$core$Maybe$Just($Chadtech$elm_us_state_abbreviations$UsStates$UT))('')('')('')('')('')('')('')('')('')('')('')('')('')('')(''),
 		$elm$core$Platform$Cmd$none);
 };
 var $elm$core$Platform$Sub$batch = _Platform_batch;
@@ -5400,6 +5430,20 @@ var $author$project$NewPatientForm$update = F2(
 							gender: $elm$core$Maybe$Just(gender)
 						}),
 					$elm$core$Platform$Cmd$none);
+			case 'UpdateSameAsGuardian':
+				var name = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{sameAsGuardian: name}),
+					$elm$core$Platform$Cmd$none);
+			case 'UpdateSameAsInsurance':
+				var name = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{sameAsInsurance: name}),
+					$elm$core$Platform$Cmd$none);
 			case 'UpdateFatherName':
 				var name = msg.a;
 				return _Utils_Tuple2(
@@ -5464,12 +5508,103 @@ var $author$project$NewPatientForm$update = F2(
 						model,
 						{state: mState}),
 					$elm$core$Platform$Cmd$none);
-			default:
+			case 'UpdateZip':
 				var zip = msg.a;
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
 						{zip: zip}),
+					$elm$core$Platform$Cmd$none);
+			case 'UpdatePolicyHolder':
+				var name = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{policyHolder: name}),
+					$elm$core$Platform$Cmd$none);
+			case 'UpdatePolicyDob':
+				var dob = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{policyDob: dob}),
+					$elm$core$Platform$Cmd$none);
+			case 'UpdatePolicySsn':
+				var ssn = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{policySsn: ssn}),
+					$elm$core$Platform$Cmd$none);
+			case 'UpdatePolicyRelationship':
+				var relationship = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{policySsn: relationship}),
+					$elm$core$Platform$Cmd$none);
+			case 'UpdatePolicyRelationshipPhone':
+				var phone = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{policyRelationshipPhone: phone}),
+					$elm$core$Platform$Cmd$none);
+			case 'UpdatePolicyEmployer':
+				var employer = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{policyEmployer: employer}),
+					$elm$core$Platform$Cmd$none);
+			case 'UpdatePolicyCompany':
+				var company = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{policyCompany: company}),
+					$elm$core$Platform$Cmd$none);
+			case 'UpdatePolicyPhone':
+				var phone = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{policyPhone: phone}),
+					$elm$core$Platform$Cmd$none);
+			case 'UpdatePolicyStreet':
+				var street = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{policyStreet: street}),
+					$elm$core$Platform$Cmd$none);
+			case 'UpdatePolicyCity':
+				var city = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{policyCity: city}),
+					$elm$core$Platform$Cmd$none);
+			case 'UpdatePolicyZip':
+				var zip = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{policyZip: zip}),
+					$elm$core$Platform$Cmd$none);
+			case 'UpdatePolicyID':
+				var id = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{policyID: id}),
+					$elm$core$Platform$Cmd$none);
+			default:
+				var group = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{policyGroup: group}),
 					$elm$core$Platform$Cmd$none);
 		}
 	});
@@ -5495,6 +5630,9 @@ var $author$project$NewPatientForm$UpdateMotherName = function (a) {
 };
 var $author$project$NewPatientForm$UpdateMotherPhone = function (a) {
 	return {$: 'UpdateMotherPhone', a: a};
+};
+var $author$project$NewPatientForm$UpdateSameAsGuardian = function (a) {
+	return {$: 'UpdateSameAsGuardian', a: a};
 };
 var $author$project$NewPatientForm$UpdateStreet = function (a) {
 	return {$: 'UpdateStreet', a: a};
@@ -5601,6 +5739,7 @@ var $author$project$NewPatientForm$dateInput = F4(
 				]));
 	});
 var $elm$html$Html$fieldset = _VirtualDom_node('fieldset');
+var $elm$html$Html$h2 = _VirtualDom_node('h2');
 var $elm$html$Html$p = _VirtualDom_node('p');
 var $author$project$NewPatientForm$UpdateState = function (a) {
 	return {$: 'UpdateState', a: a};
@@ -5760,7 +5899,8 @@ var $author$project$NewPatientForm$stateOptions = function () {
 				$elm$html$Html$select,
 				_List_fromArray(
 					[
-						$elm$html$Html$Events$onInput($author$project$NewPatientForm$UpdateState)
+						$elm$html$Html$Events$onInput($author$project$NewPatientForm$UpdateState),
+						$elm$html$Html$Attributes$id('state')
 					]),
 				A2($elm$core$List$map, stateOption, $Chadtech$elm_us_state_abbreviations$UsStates$all))
 			]));
@@ -5805,15 +5945,23 @@ var $author$project$NewPatientForm$guardianInformation = function (model) {
 		_List_fromArray(
 			[
 				A2(
+				$elm$html$Html$h2,
+				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Parent/Guargian Information')
+					])),
+				A4($author$project$NewPatientForm$textInput, 'same-as', 'Same information as', model.sameAsGuardian, $author$project$NewPatientForm$UpdateSameAsGuardian),
+				A2(
 				$elm$html$Html$p,
 				_List_Nil,
 				_List_fromArray(
 					[
 						$elm$html$Html$text('Legal Mother')
 					])),
-				A4($author$project$NewPatientForm$textInput, 'mother', 'Name', model.motherName, $author$project$NewPatientForm$UpdateMotherName),
-				A4($author$project$NewPatientForm$dateInput, 'mother', 'DOB', model.motherDob, $author$project$NewPatientForm$UpdateMotherDob),
-				A4($author$project$NewPatientForm$textInput, 'mother', 'Phone', model.motherPhone, $author$project$NewPatientForm$UpdateMotherPhone),
+				A4($author$project$NewPatientForm$textInput, 'mother-name', 'Name', model.motherName, $author$project$NewPatientForm$UpdateMotherName),
+				A4($author$project$NewPatientForm$dateInput, 'mother-dob', 'DOB', model.motherDob, $author$project$NewPatientForm$UpdateMotherDob),
+				A4($author$project$NewPatientForm$textInput, 'mother-phone', 'Phone', model.motherPhone, $author$project$NewPatientForm$UpdateMotherPhone),
 				A2(
 				$elm$html$Html$p,
 				_List_Nil,
@@ -5821,13 +5969,98 @@ var $author$project$NewPatientForm$guardianInformation = function (model) {
 					[
 						$elm$html$Html$text('Legal Father')
 					])),
-				A4($author$project$NewPatientForm$textInput, 'father', 'Name', model.fatherName, $author$project$NewPatientForm$UpdateFatherName),
-				A4($author$project$NewPatientForm$dateInput, 'father', 'DOB', model.fatherDob, $author$project$NewPatientForm$UpdateFatherDob),
-				A4($author$project$NewPatientForm$textInput, 'father', 'Phone', model.fatherPhone, $author$project$NewPatientForm$UpdateFatherPhone),
-				A4($author$project$NewPatientForm$textInput, '', 'Street', model.street, $author$project$NewPatientForm$UpdateStreet),
-				A4($author$project$NewPatientForm$textInput, '', 'City', model.city, $author$project$NewPatientForm$UpdateCity),
-				A4($author$project$NewPatientForm$textInput, '', 'Zip', model.city, $author$project$NewPatientForm$UpdateZip),
+				A4($author$project$NewPatientForm$textInput, 'father-name', 'Name', model.fatherName, $author$project$NewPatientForm$UpdateFatherName),
+				A4($author$project$NewPatientForm$dateInput, 'father-dob', 'DOB', model.fatherDob, $author$project$NewPatientForm$UpdateFatherDob),
+				A4($author$project$NewPatientForm$textInput, 'father-phone', 'Phone', model.fatherPhone, $author$project$NewPatientForm$UpdateFatherPhone),
+				A2(
+				$elm$html$Html$p,
+				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Address')
+					])),
+				A4($author$project$NewPatientForm$textInput, 'street', 'Street', model.street, $author$project$NewPatientForm$UpdateStreet),
+				A4($author$project$NewPatientForm$textInput, 'city', 'City', model.city, $author$project$NewPatientForm$UpdateCity),
+				A4($author$project$NewPatientForm$textInput, 'zip', 'Zip', model.city, $author$project$NewPatientForm$UpdateZip),
 				$author$project$NewPatientForm$stateOptions
+			]));
+};
+var $author$project$NewPatientForm$UpdatePolicyCity = function (a) {
+	return {$: 'UpdatePolicyCity', a: a};
+};
+var $author$project$NewPatientForm$UpdatePolicyCompany = function (a) {
+	return {$: 'UpdatePolicyCompany', a: a};
+};
+var $author$project$NewPatientForm$UpdatePolicyDob = function (a) {
+	return {$: 'UpdatePolicyDob', a: a};
+};
+var $author$project$NewPatientForm$UpdatePolicyEmployer = function (a) {
+	return {$: 'UpdatePolicyEmployer', a: a};
+};
+var $author$project$NewPatientForm$UpdatePolicyGroup = function (a) {
+	return {$: 'UpdatePolicyGroup', a: a};
+};
+var $author$project$NewPatientForm$UpdatePolicyHolder = function (a) {
+	return {$: 'UpdatePolicyHolder', a: a};
+};
+var $author$project$NewPatientForm$UpdatePolicyID = function (a) {
+	return {$: 'UpdatePolicyID', a: a};
+};
+var $author$project$NewPatientForm$UpdatePolicyPhone = function (a) {
+	return {$: 'UpdatePolicyPhone', a: a};
+};
+var $author$project$NewPatientForm$UpdatePolicyRelationship = function (a) {
+	return {$: 'UpdatePolicyRelationship', a: a};
+};
+var $author$project$NewPatientForm$UpdatePolicyRelationshipPhone = function (a) {
+	return {$: 'UpdatePolicyRelationshipPhone', a: a};
+};
+var $author$project$NewPatientForm$UpdatePolicySsn = function (a) {
+	return {$: 'UpdatePolicySsn', a: a};
+};
+var $author$project$NewPatientForm$UpdatePolicyStreet = function (a) {
+	return {$: 'UpdatePolicyStreet', a: a};
+};
+var $author$project$NewPatientForm$UpdatePolicyZip = function (a) {
+	return {$: 'UpdatePolicyZip', a: a};
+};
+var $author$project$NewPatientForm$UpdateSameAsInsurance = function (a) {
+	return {$: 'UpdateSameAsInsurance', a: a};
+};
+var $author$project$NewPatientForm$insuranceInformation = function (model) {
+	return A2(
+		$elm$html$Html$fieldset,
+		_List_Nil,
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$h2,
+				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Dental Insurance')
+					])),
+				A4($author$project$NewPatientForm$textInput, 'same-as', 'Same information as', model.sameAsInsurance, $author$project$NewPatientForm$UpdateSameAsInsurance),
+				A4($author$project$NewPatientForm$textInput, 'policy-holder', 'Policy Holder', model.policyHolder, $author$project$NewPatientForm$UpdatePolicyHolder),
+				A4($author$project$NewPatientForm$textInput, 'policy-dob', 'DOB', model.policyDob, $author$project$NewPatientForm$UpdatePolicyDob),
+				A4($author$project$NewPatientForm$textInput, 'policy-ssn', 'SSN', model.policySsn, $author$project$NewPatientForm$UpdatePolicySsn),
+				A4($author$project$NewPatientForm$textInput, 'policy-relationship', 'Relationship to Patient', model.policyRelationship, $author$project$NewPatientForm$UpdatePolicyRelationship),
+				A4($author$project$NewPatientForm$textInput, 'policy-relationship-phone', 'Phone', model.policyRelationshipPhone, $author$project$NewPatientForm$UpdatePolicyRelationshipPhone),
+				A4($author$project$NewPatientForm$textInput, 'policy-employer', 'Employer', model.policyEmployer, $author$project$NewPatientForm$UpdatePolicyEmployer),
+				A4($author$project$NewPatientForm$textInput, 'policy-company', 'Dental Insurance Company', model.policyCompany, $author$project$NewPatientForm$UpdatePolicyCompany),
+				A4($author$project$NewPatientForm$textInput, 'policy-phone', 'Phone', model.policyPhone, $author$project$NewPatientForm$UpdatePolicyPhone),
+				A2(
+				$elm$html$Html$p,
+				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Address')
+					])),
+				A4($author$project$NewPatientForm$textInput, 'policy-street', 'Street', model.policyStreet, $author$project$NewPatientForm$UpdatePolicyStreet),
+				A4($author$project$NewPatientForm$textInput, 'policy-city', 'City', model.policyCity, $author$project$NewPatientForm$UpdatePolicyCity),
+				A4($author$project$NewPatientForm$textInput, 'policy-zip', 'Zip', model.policyZip, $author$project$NewPatientForm$UpdatePolicyZip),
+				A4($author$project$NewPatientForm$textInput, 'policy-id', 'ID #', model.policyID, $author$project$NewPatientForm$UpdatePolicyID),
+				A4($author$project$NewPatientForm$textInput, 'policy-group', 'Group #', model.policyGroup, $author$project$NewPatientForm$UpdatePolicyGroup)
 			]));
 };
 var $author$project$NewPatientForm$UpdateDob = function (a) {
@@ -5919,6 +6152,13 @@ var $author$project$NewPatientForm$patientInformation = function (model) {
 		_List_Nil,
 		_List_fromArray(
 			[
+				A2(
+				$elm$html$Html$h2,
+				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Patient Information')
+					])),
 				A4($author$project$NewPatientForm$textInput, '', 'First Name', model.firstName, $author$project$NewPatientForm$UpdateFirstName),
 				A4($author$project$NewPatientForm$textInput, '', 'Middle Name', model.midName, $author$project$NewPatientForm$UpdateMidName),
 				A4($author$project$NewPatientForm$textInput, '', 'Last Name', model.lastName, $author$project$NewPatientForm$UpdateLastName),
@@ -5943,7 +6183,8 @@ var $author$project$NewPatientForm$view = function (model) {
 						$elm$core$Debug$toString(model))
 					])),
 				$author$project$NewPatientForm$patientInformation(model),
-				$author$project$NewPatientForm$guardianInformation(model)
+				$author$project$NewPatientForm$guardianInformation(model),
+				$author$project$NewPatientForm$insuranceInformation(model)
 			]));
 };
 var $author$project$NewPatientForm$main = $elm$browser$Browser$element(
@@ -5985,6 +6226,7 @@ var $author$project$MrGoldenSun$smallSpike = function (angle) {
 			]),
 		_List_Nil);
 };
+var $elm$svg$Svg$Attributes$stroke = _VirtualDom_attribute('stroke');
 var $elm$svg$Svg$Attributes$strokeLinecap = _VirtualDom_attribute('stroke-linecap');
 var $elm$svg$Svg$Attributes$strokeLinejoin = _VirtualDom_attribute('stroke-linejoin');
 var $elm$svg$Svg$Attributes$strokeWidth = _VirtualDom_attribute('stroke-width');
@@ -6023,6 +6265,7 @@ var $author$project$MrGoldenSun$mrSun = A2(
 			$elm$svg$Svg$Attributes$height('200'),
 			$elm$svg$Svg$Attributes$viewBox('0 0 200 200'),
 			$elm$svg$Svg$Attributes$fill('#ffe680'),
+			$elm$svg$Svg$Attributes$stroke('#333'),
 			$elm$svg$Svg$Attributes$strokeWidth('4'),
 			$elm$svg$Svg$Attributes$strokeLinecap('round'),
 			$elm$svg$Svg$Attributes$strokeLinejoin('round'),
