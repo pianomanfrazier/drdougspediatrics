@@ -4,6 +4,7 @@ import Browser
 import Html exposing (Html, button, div, fieldset, form, input, label, text)
 import Html.Attributes as Attr exposing (value)
 import Html.Events exposing (onClick, onInput)
+import NewPatientMarkdown exposing (renderMarkdown)
 import UsStates exposing (Abbreviation(..))
 
 
@@ -45,15 +46,20 @@ type alias Model =
     , policyPhone : String
     , policyStreet : String
     , policyCity : String
+    , policyState : Maybe UsStates.Abbreviation
     , policyZip : String
     , policyID : String
     , policyGroup : String
+    , agree : Bool
+    , agreementSignature : String
+    , otherName : String
+    , otherPhone : String
     }
 
 
 init : () -> ( Model, Cmd Msg )
 init _ =
-    ( Model "" "" "" "" "" Nothing "" "" "" "" "" "" "" "" "" (Just UT) "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+    ( Model "" "" "" "" "" Nothing "" "" "" "" "" "" "" "" "" Nothing "" "" "" "" "" "" "" "" "" "" "" "" Nothing "" "" "" False "" "" ""
     , Cmd.none
     )
 
@@ -91,9 +97,14 @@ type Msg
     | UpdatePolicyPhone String
     | UpdatePolicyStreet String
     | UpdatePolicyCity String
+    | UpdatePolicyState String
     | UpdatePolicyZip String
     | UpdatePolicyID String
     | UpdatePolicyGroup String
+    | UpdateAgreement String
+    | UpdateAgreementSignature String
+    | UpdateOtherName String
+    | UpdateOtherPhone String
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -116,7 +127,7 @@ update msg model =
 
         UpdateGender gender ->
             ( { model | gender = Just gender }, Cmd.none )
-        
+
         UpdateSameAsGuardian name ->
             ( { model | sameAsGuardian = name }, Cmd.none )
 
@@ -159,7 +170,7 @@ update msg model =
 
         UpdatePolicyHolder name ->
             ( { model | policyHolder = name }, Cmd.none )
-        
+
         UpdatePolicyDob dob ->
             ( { model | policyDob = dob }, Cmd.none )
 
@@ -168,33 +179,52 @@ update msg model =
 
         UpdatePolicyRelationship relationship ->
             ( { model | policySsn = relationship }, Cmd.none )
-        
+
         UpdatePolicyRelationshipPhone phone ->
             ( { model | policyRelationshipPhone = phone }, Cmd.none )
-        
+
         UpdatePolicyEmployer employer ->
             ( { model | policyEmployer = employer }, Cmd.none )
-        
+
         UpdatePolicyCompany company ->
             ( { model | policyCompany = company }, Cmd.none )
-        
+
         UpdatePolicyPhone phone ->
             ( { model | policyPhone = phone }, Cmd.none )
-        
+
         UpdatePolicyStreet street ->
             ( { model | policyStreet = street }, Cmd.none )
-        
+
         UpdatePolicyCity city ->
             ( { model | policyCity = city }, Cmd.none )
-        
+
         UpdatePolicyZip zip ->
             ( { model | policyZip = zip }, Cmd.none )
-        
+
+        UpdatePolicyState state ->
+            let
+                mState =
+                    UsStates.fromString state
+            in
+            ( { model | policyState = mState }, Cmd.none )
+
         UpdatePolicyID id ->
             ( { model | policyID = id }, Cmd.none )
-        
+
         UpdatePolicyGroup group ->
             ( { model | policyGroup = group }, Cmd.none )
+
+        UpdateAgreement _ ->
+            ( { model | agree = not model.agree }, Cmd.none )
+
+        UpdateAgreementSignature signature ->
+            ( { model | agreementSignature = signature }, Cmd.none )
+
+        UpdateOtherName name ->
+            ( { model | otherName = name }, Cmd.none )
+
+        UpdateOtherPhone phone ->
+            ( { model | otherPhone = phone }, Cmd.none )
 
 
 
@@ -209,6 +239,8 @@ view model =
         , patientInformation model
         , guardianInformation model
         , insuranceInformation model
+        , renderMarkdown
+        , submit model
         ]
 
 
@@ -244,17 +276,23 @@ guardianInformation model =
         , textInput "street" "Street" model.street UpdateStreet
         , textInput "city" "City" model.city UpdateCity
         , textInput "zip" "Zip" model.city UpdateZip
-        , stateOptions
+        , stateOptions UpdateState
+        , Html.p [] [ text "Any other adults allowed access to the patient's dental records" ]
+        , textInput "other-name" "Name" model.otherName UpdateOtherName
+        , textInput "other-phone" "Phone" model.otherPhone UpdateOtherPhone
+        , guardianWarning
         ]
+
 
 insuranceInformation : Model -> Html Msg
 insuranceInformation model =
     fieldset
         []
         [ Html.h2 [] [ text "Dental Insurance" ]
+        , insuranceWarning
         , textInput "same-as" "Same information as" model.sameAsInsurance UpdateSameAsInsurance
         , textInput "policy-holder" "Policy Holder" model.policyHolder UpdatePolicyHolder
-        , textInput "policy-dob" "DOB" model.policyDob UpdatePolicyDob
+        , dateInput "policy-dob" "DOB" model.policyDob UpdatePolicyDob
         , textInput "policy-ssn" "SSN" model.policySsn UpdatePolicySsn
         , textInput "policy-relationship" "Relationship to Patient" model.policyRelationship UpdatePolicyRelationship
         , textInput "policy-relationship-phone" "Phone" model.policyRelationshipPhone UpdatePolicyRelationshipPhone
@@ -265,8 +303,51 @@ insuranceInformation model =
         , textInput "policy-street" "Street" model.policyStreet UpdatePolicyStreet
         , textInput "policy-city" "City" model.policyCity UpdatePolicyCity
         , textInput "policy-zip" "Zip" model.policyZip UpdatePolicyZip
+        , stateOptions UpdatePolicyState
         , textInput "policy-id" "ID #" model.policyID UpdatePolicyID
         , textInput "policy-group" "Group #" model.policyGroup UpdatePolicyGroup
+        ]
+
+
+guardianWarning : Html Msg
+guardianWarning =
+    Html.div
+        []
+        [ Html.p
+            []
+            [ text "We can only put ONE Responsible Party in our system for a patient/family. The Responsible Party is the parent/guardian that will receive appointment reminders, bills, updates, & any other communication(s) from our office.  He/She agrees to pay all fees related to this patient’s care. The Responsible Party does not have to be the insurance policy holder." ]
+        , Html.p
+            []
+            [ text "We understand that in some cases billing responsibilities are shared. However, we are unable to do “split billing”. In an effort to be helpful, we can provide copies of receipt(s) for payments made in full. Payments from multiple parties can be taken over the phone before or on the day of service as well." ]
+        ]
+
+
+insuranceWarning : Html Msg
+insuranceWarning =
+    Html.div
+        []
+        [ Html.p
+            []
+            [ text "This section must be filled out at time of service or you will be asked to pay for your visit in full. We do not accept Medical insurance." ]
+        ]
+
+
+stringFromBool val =
+    if val then
+        "true"
+
+    else
+        "false"
+
+
+submit : Model -> Html Msg
+submit model =
+    div
+        []
+        [ Html.input [ Attr.type_ "checkbox", Attr.id "agreement", Attr.name "agreement", Attr.value <| stringFromBool model.agree, onInput UpdateAgreement ] []
+        , Html.label [ Attr.for "agreement" ] [ text "I acknowledge that I have read and agree to the aforementioned policies." ]
+        , textInput "signature-agreement" "Type name for digital signature" model.agreementSignature UpdateAgreementSignature
+        , button [ Attr.disabled (not model.agree || model.agreementSignature == "") ] [ text "Submit" ]
         ]
 
 
@@ -277,20 +358,20 @@ labelToId label =
         |> String.replace " " "-"
 
 
-stateOptions : Html Msg
-stateOptions =
+stateOptions : (String -> Msg) -> Html Msg
+stateOptions msg =
     let
         stateOption state =
             Html.option
-                [ value <| UsStates.toString state, Attr.selected (state == UT) ]
+                [ value <| UsStates.toString state ]
                 [ text (UsStates.toString state) ]
     in
     div
         []
         [ label [ Attr.for "state" ] [ text "State" ]
         , Html.select
-            [ onInput UpdateState, Attr.id "state" ]
-            (List.map stateOption UsStates.all)
+            [ onInput msg, Attr.id "state" ]
+            ([ Html.option [ value "" ] [ text "" ] ] ++ List.map stateOption UsStates.all)
         ]
 
 
