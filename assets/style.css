@@ -64,6 +64,9 @@ h2 {
 }
 
 /* ICON COLORS */
+.fill-cream {
+    fill: var(--color-cream);
+}
 .feather-envelope {
     fill: var(--color-cream);
 }
@@ -485,6 +488,9 @@ img {
     width: 100%;
 } 
 /* ACCORDION */
+.accordion-content ul {
+    width: 90%;
+}
 .accordion-content {
     display:none;
 }
@@ -520,13 +526,23 @@ img {
 }
 
 /* FOOTER */
+footer {
+    background-color: var(--color-dark);
+}
 .footer {
+    margin: auto;
     padding: 3rem 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 70em;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
     color: var(--text-light);
     font-weight: 600;
-    background-color: var(--color-dark);
+}
+.footer ul {
+
 }
 .footer li {
     list-style-type: none;
