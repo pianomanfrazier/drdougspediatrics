@@ -24,6 +24,7 @@
     <script src="//unpkg.com/leaflet-gesture-handling"></script>
 
     <script src="/assets/elm.js"></script>
+    <script src="/assets/accordion.js"></script>
 
 </head>
 
@@ -49,7 +50,7 @@
                 <span>drdoug@drdougspediatrics.com</span>
             </a>
         </div>
-        <a href="/es/">
+        <!-- <a href="/es/">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="feather-language">
@@ -61,7 +62,7 @@
                 <path d="M14 18h6"></path>
             </svg>
             Español
-        </a>
+        </a> -->
     </div>
     <div class="hero">
         <h1>Dr. Doug's Pediatric Dentistry</h1>
@@ -146,7 +147,7 @@
             </svg>
             Medical History Form
         </a>
-        <a href="/payment" class="link btn">
+        <!-- <a href="/payment" class="link btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="feather-credit-card">
@@ -154,15 +155,15 @@
                 <line x1="1" y1="10" x2="23" y2="10"></line>
             </svg>
             Make a Payment
-        </a>
+        </a> -->
     </div>
 
     <nav>
         <ul>
-            <li><a class="hover-purple" href="#drdoug">About Dr. Doug</a></li>
-            <li><a class="hover-teal" href="#about">About The Office</a></li>
-            <li><a class="hover-red" href="#faq">FAQ</a></li>
-            <li><a class="hover-yellow" href="#services">Services & Procedures</a></li>
+            <li><a href="#drdoug">About Dr. Doug</a></li>
+            <li><a href="#about">About The Office</a></li>
+            <li><a href="#services">Services & Procedures</a></li>
+            <li><a href="#faq">FAQ</a></li>
         </ul>
     </nav>
 
@@ -170,7 +171,7 @@
         <div class="map-container">
             <img class="map-item" src='./assets/images/DrDougJuly.jpg' alt=''>
             <div class="map-item" id="mapid"></div>
-            <div class="border-none p-2">Office Hours: Monday - Thursday, 9AM to 5PM</div>
+            <div class="border-none bold p-2">Office Hours: Monday - Thursday, 9AM to 5PM</div>
         </div>
     </div>
 
@@ -192,31 +193,30 @@
         </section>
 
 
-        <section class="section bubbles2">
-            <div class="text-center">
-                <img class="w-100" loading="lazy" src="/assets/images/DrDoug-and-family.jpg" title="Boy smiling" alt="">
-            </div>
-            <div class="content">
-                <h2 id="drdoug">About Dr. Doug</h2>
-                <p>Dr. K. Douglas Fryer, a.k.a. “Dr. Doug” was raised here in Utah. He attended Utah State University
-                    and is an avid Aggie basketball and track fan. He then attended The Ohio State University for dental
-                    school and became an avid Buckeye football fan. After dental school he finished a two year Pediatric
-                    Dentistry residency in order to specialize in working with children.</p>
-                <p>Dr. Doug is a Diplomate of the American Board of Pediatric Dentistry. Dr. Doug lives in Logan with
-                    his wife and children. He says every day is a great day at work. He believes that kids do a great
-                    job in his office and that makes his job a success. He is thankful to work with great staff, sweet
-                    parents and Super Kids. </p>
+        <section class="bubbles2">
+            <div class="section">
+                <div class="text-center">
+                    <img class="w-100" loading="lazy" src="/assets/images/DrDoug-and-family.jpg" title="Boy smiling" alt="">
+                </div>
+                <div class="content">
+                    <h2 id="drdoug">About Dr. Doug</h2>
+                    <p>Dr. K. Douglas Fryer, a.k.a. “Dr. Doug” was raised here in Utah. He attended Utah State University
+                        and is an avid Aggie basketball and track fan. He then attended The Ohio State University for dental
+                        school and became an avid Buckeye football fan. After dental school he finished a two year Pediatric
+                        Dentistry residency in order to specialize in working with children.</p>
+                    <p>Dr. Doug is a Diplomate of the American Board of Pediatric Dentistry. Dr. Doug lives in Logan with
+                        his wife and children. He says every day is a great day at work. He believes that kids do a great
+                        job in his office and that makes his job a success. He is thankful to work with great staff, sweet
+                        parents and Super Kids. </p>
+                </div>
             </div>
         </section>
 
-        <section>
-            <h2 id="faq" class="text-center">F.A.Q.</h2>
-        </section>
 
         <section>
             <h2 id="services" class="text-center">Services & Procedures</h2>
 
-            <div class="products text-center">
+            <div class="products text-center mt-4">
                 <div>
                     <img height="300" width="300" src="/assets/images/isodry.jpg" alt="">
                     <div>
@@ -232,17 +232,120 @@
                 </div>
             </div>
 
-            <div class="mx-2">
+            <div class="accordion-outer mt-4">
+                <div class="accordion">
+                    <button class="accordion-btn" onClick="toggle('accordion-content-7', this)">
+                        <h3>Regular 6 month Check-up and Cleanings</h3>
+                    </button>
+                    <div class="accordion-content" id="accordion-content-7">
+                        <p>We specialize in patience and making cleanings fun positive experiences for the kids. We are able to do a cleaning, fluoride treatment, and x-rays on most children. Extra special care is given to small children in order to perform a thorough check up and toothbrush cleaning.</p>
+                    </div>
+
+                    <button class="accordion-btn" onClick="toggle('accordion-content-8', this)">
+                        <h3>Operative Dentistry</h3>
+                    </button>
+                    <div class="accordion-content" id="accordion-content-8">
+                        <p>(i.e. fillings, crowns, sealants) This is normally done with Nitrous Oxide.</p>
+                    </div>
+
+                    <button class="accordion-btn" onClick="toggle('accordion-content-9', this)">
+                        <h3>Oral Sedation Dentistry</h3>
+                    </button>
+                    <div class="accordion-content" id="accordion-content-9">
+                        <p>(i.e. Regular dentistry done with light sedative medications). At this appointment your child will have a personal helper assigned specifically to them. This helper will assist in giving the medications, supervise your child while medications are setting in, and assist them through their dental work. This helps gain confidence in their dental work and trust in our staff.</p>
+                    </div>
+
+                    <button class="accordion-btn" onClick="toggle('accordion-content-10', this)">
+                        <h3>Hospital Anesthesia/Sedation Dentistry</h3>
+                    </button>
+                    <div class="accordion-content" id="accordion-content-10">
+                        <p>(i.e. dentistry done under General Anesthesia/I.V. sedation) this can be helpful for very anxious children or those who may have a lot of work to be done.</p>
+                    </div>
+
+                    <button class="accordion-btn" onClick="toggle('accordion-content-11', this)">
+                        <h3>Early Pediatric Orthodontics or Interceptive Orthodontics</h3>
+                    </button>
+                    <div class="accordion-content" id="accordion-content-11">
+                        <p>Many of our patient enjoy being able to stay in the comfort of our office for early Orthodontics where we can continue to provide flexibility, activities, and extra tender loving care to young patients needing orthodontic treatment.</p>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="mx-2 mt-4">
                 <img class="m-auto block" width="100%" src="/assets/images/logan-regional.png" alt="">
-                <div class="measure m-auto text-center">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam autem libero repellat consectetur repellendus ipsum minima necessitatibus ullam animi pariatur commodi, ipsam unde similique numquam quos perferendis saepe placeat expedita!
-                    </p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit incidunt esse laboriosam nemo enim ipsa magni quidem vero eligendi non molestias totam tempora eaque quisquam quaerat tempore aspernatur accusantium, repellat quibusdam doloribus pariatur. Dolore aliquid reiciendis sed voluptate temporibus accusantium. Praesentium laboriosam non alias. A ea doloremque sunt aperiam aliquid hic asperiores itaque ad nemo sapiente. Sint amet atque quaerat, quisquam quasi incidunt culpa ex aspernatur ipsum, ad, dignissimos distinctio quo. Ut placeat expedita nisi dolores eveniet impedit in repellendus laborum amet magni alias adipisci laudantium similique, beatae doloribus odit sed? Corporis enim culpa doloribus architecto sit, est aperiam a.
-                    </p>
+                <div class="measure m-auto bold p-2 text-center">
+                    Logan Regional Hospital
                 </div>
             </div>
+        </section>
+
+        <section>
+            <h2 id="faq" class="text-center mt-4">F.A.Q.</h2>
+
+            <div class="accordion-outer mb-2">
+                <div class="accordion">
+                    <button class="accordion-btn" onClick="toggle('accordion-content-1', this)">
+                        <h3>What to expect from our pediatric dental office</h3>
+                    </button>
+                    <div class="accordion-content" id="accordion-content-1">
+                        <p>At “Dr Doug’s” childrens dental office in Logan, Utah, our goal is to educate children and parents in order to promote healthy bodies and beautiful teeth for those in our office. Our hope and goal is that we can do this in a positive fun atmosphere. We believe that with a fun place to play and people that truly care for your child we can make your visit great. We are excited to get to know each parent and child that comes into our office. We hope you enjoy getting to know us too.</p>
+                        <p>As a pediatric dentist “Dr. Doug” has specialized training in the latest research in pediatric dentistry. He is versed in the most up to date restorative techniques, information, and in pediatric oral facial development.</p>
+                    </div>
+
+                    <button class="accordion-btn" onClick="toggle('accordion-content-2', this)">
+                        <h3>When to come to the dentist?</h3>
+                    </button>
+                    <div class="accordion-content" id="accordion-content-2">
+                        <p>The American Academy of Pediatric Dentistry recommends to start coming to the dentist sometime between the time of the first tooth and one years of age. This will allow the dentist to diagnose any special oral conditions and to create a positive first visit.</p>
+                    </div>
+
+                    <button class="accordion-btn" onClick="toggle('accordion-content-3', this)">
+                        <h3>How often to brush?</h3>
+                    </button>
+                    <div class="accordion-content" id="accordion-content-3">
+                        <p>At a minimum, you should brush your toddlers teeth twice a day. Generally, you would brush your child’s teeth in the morning and before bedtime. Begin flossing when teeth began touching each other.</p>
+                    </div>
+
+                    <button class="accordion-btn" onClick="toggle('accordion-content-4', this)">
+                       <h3>What is topical fluoride?</h3>
+                    </button>
+                    <div class="accordion-content" id="accordion-content-4">
+                        <p>Topical fluorides include toothpastes, mouth rinses and professionally applied fluoride therapies. Topical fluorides strengthen teeth already present in the mouth making them more decay resistant.</p>
+                        <p>Children over 18 months should use at most a pea size amount of fluoride toothpaste. This amount should be used until they are old enough to spit.</p>
+                    </div>
+
+                    <button class="accordion-btn" onClick="toggle('accordion-content-5', this)">
+                        <h3>What is systemic fluoride?</h3>
+                    </button>
+                    <div class="accordion-content" id="accordion-content-5">
+                        <p>Fluorides that are ingested into the body and become incorporated into forming tooth structure. They include fluoridated water and dietary supplements in the form of tablets, drops, or lozenges.</p>
+                    </div>
+
+                    <button class="accordion-btn" onClick="toggle('accordion-content-6', this)">
+                        <h3>When will my child get and loose their teeth and get their permanent teeth?</h3>
+                    </button>
+                    <div class="accordion-content" id="accordion-content-6">
+                        <h4>Baby Teeth:</h4>
+                        <ul>
+                            <li>At about six months of age, the lower central incisors (bottom jaw front teeth) generally erupt. These are followed by the upper incisors and both maxillary (upper) and mandibular (lower) lateral incisors.</li>
+                            <li>By the first birthday, eight incisors are usually present.</li>
+                            <li>At about 15 months of age, the first primary molars (back teeth used for grinding food) erupt.</li>
+                            <li>Around age two, the canines are present. Shortly thereafter, the second primary molars erupt.</li>
+                            <li>By three years of age, all of the primary teeth are generally present.</li>
+                        </ul>
+
+                        <h4>Permanent Teeth:</h4>
+                        <ul>
+                            <li>The permanent teeth start erupting from the age of 6, and by the age of 13, all the baby teeth have been replaced.</li>
+                            <li>During these 7 years, 20 baby teeth are lost and are replaced by 28 permanent teeth.</li>
+                            <li>The mixed dentition stage is the period when some baby and permanent teeth are visible in the mouth at the same time.</li>
+                            <li>These are average timelines and can be discussed on an individual basis with Dr. Doug.</li>
+                        </ul>
+                            
+                    </div>
+                </div>
+            </div>
+
         </section>
 
 

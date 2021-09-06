@@ -50,6 +50,9 @@ h1 {
 h2 {
     font-size: 2.1em;
 }
+.bold {
+    font-weight: 600;
+}
 .tagline {
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 700;
@@ -302,35 +305,15 @@ nav a {
     font-weight: 700;
     padding: 6px 8px 0 8px;
 }
-.hover-blue:hover {
-    border-bottom: 8px solid var(--color-blue);
-}
-.hover-teal:hover {
-    border-bottom: 8px solid var(--color-teal);
-}
-.hover-red:hover {
-    border-bottom: 8px solid var(--color-red);
-}
-.hover-yellow:hover {
-    border-bottom: 8px solid var(--color-sun-yellow);
-}
-.hover-purple:hover {
-    border-bottom: 8px solid var(--color-purple);
-}
-.blue-shadow {
-    box-shadow: 12px 12px var(--color-blue);
-}
-.red-shadow {
-    box-shadow: 12px 12px var(--color-red);
-}
 
 .hero {
     text-align: center;
 }
 .section {
-    width: 100%;
-    margin: 2em 0;
-    /* columns: 2 400px; */
+    max-width: 90em;
+    margin: auto;
+    /* width: 100%;
+    margin: 2em 0; */
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -392,6 +375,7 @@ nav a {
 }
 /* BUBBLE BORDER */
 .bubbles {
+    width: 100%;
     padding: 16em 0;
     position: relative;
     background: var(--color-blue);
@@ -421,6 +405,7 @@ nav a {
 
 /* FLOATING BUBBLE BORDER */
 .bubbles2 {
+    width: 100%;
     position: relative;
     background-color: var(--color-teal);
     padding: 12em 0;
@@ -499,6 +484,40 @@ img {
     display: inline-block;
     width: 100%;
 } 
+/* ACCORDION */
+.accordion-content {
+    display:none;
+}
+.accordion-visible {
+    display:block;
+}
+.accordion-outer {
+    max-width: 45em;
+    margin: auto;
+}
+.accordion * {
+    width: 100%;
+    text-align: left;
+}
+.accordion-btn {
+    background-color: #0000;
+    border: none;
+    border-bottom: 1px solid #333;
+}
+.accordion-btn.accordion-btn-active h3:after{
+    /* content: url(/assets/images/minus.svg); */
+    content: url(/assets/images/chevron-down.svg);
+    width: 2em;
+    float: right;
+    /* display: inline-block; */
+}
+.accordion-btn h3:after{
+    /* content: url(/assets/images/plus.svg); */
+    content: url(/assets/images/chevron-right.svg);
+    width: 2em;
+    float: right;
+    /* display: inline-block; */
+}
 
 /* FOOTER */
 .footer {
@@ -581,6 +600,12 @@ img {
 /* UTILITY CLASSES */
 .measure {
     max-width: 34em;
+}
+.mt-3 {
+    margin-top: 3em;
+}
+.mt-4 {
+    margin-top: 5em;
 }
 .p-2 {
     padding: 1em;
