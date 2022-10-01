@@ -69,6 +69,9 @@ h2 {
 .fill-cream {
     fill: var(--color-cream);
 }
+.feather-map {
+    fill: var(--color-cream);
+}
 .feather-envelope {
     fill: var(--color-cream);
 }
@@ -97,6 +100,7 @@ h1 {
 }
 
 .link.btn {
+    font-weight: 600;
     border: 2px solid var(--text-dark);
     padding: 12px 18px;
     margin: 0 0.5em;
@@ -116,6 +120,39 @@ h1 {
     left: 3px;
     box-shadow: none;
 }
+#btt-btn {
+    position: fixed;
+    bottom: 3px;
+    right: 3px;
+    z-index: 9999;
+    border: 2px solid var(--text-dark);
+    padding: 12px 18px;
+    margin: 0 0.5em;
+    margin-bottom: 1em;
+    background: var(--color-teal);
+    color: var(--text-dark);
+    border-radius: 4px;
+    box-shadow: var(--btn-shadow);
+    transition: 0ms;
+    transition: opacity 200ms;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#btt-btn > svg {
+    padding: 0;
+    margin: 0;
+}
+#btt-btn:hover {
+    bottom: 0px;
+    right: 0px;
+    box-shadow: none;
+}
+#btt-btn.hide {
+    opacity: 0%;
+}
+#btt-btn.show {
+    opacity: 100%;
+}
 /* TOP BAR WITH PHONE, EMAIL, AND LANGUAGE */
 .top-bar a {
     display: inline-flex;
@@ -132,7 +169,7 @@ h1 {
 /* SKY ANIMATIONS */
 .sky {
     position: relative;
-    padding: 10em 0;
+    padding: 9em 0;
     overflow-x: hidden;
 }
 .sky > * {
@@ -282,12 +319,16 @@ h1 {
     text-align: center;
 }
 .quick-nav a {
+    width: 14em;
     display: inline-flex;
     text-align: center;
     align-items: center;
     text-transform: uppercase;
     font-weight: 700;
     text-decoration: none;
+}
+.quick-nav a span {
+    width: 100%;
 }
 
 
@@ -315,6 +356,11 @@ nav a {
 
 .hero {
     text-align: center;
+}
+.hero-title {
+    position: relative;
+    top: 2em;
+    margin-top: -2em;
 }
 .section {
     max-width: 90em;

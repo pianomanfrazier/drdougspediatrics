@@ -27,7 +27,7 @@
     <script src="/assets/accordion.js"></script>
 </head>
 
-<body>
+<body id="top">
     <div class="flex flex-wrap items-center content-between top-bar">
         <div>
             <a href="tel:435-792-3033">
@@ -48,6 +48,26 @@
                 </svg>
                 <span>drdoug@drdougspediatrics.com</span>
             </a>
+            <a href="#hours">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill=""
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather-clock">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Hours 
+            </a>
+            <a href="#location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather-map">
+                >
+                    <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+                    <line x1="9" y1="3" x2="9" y2="18"></line>
+                    <line x1="15" y1="6" x2="15" y2="21"></line>
+                </svg>
+                Location
+            </a>
         </div>
         <!-- <a href="/es/">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -64,8 +84,10 @@
         </a> -->
     </div>
     <div class="hero">
-        <h1>Dr. Doug's Pediatric Dentistry</h1>
-        <p class="tagline">We make dentistry <span class="fun">fun</span></p>
+        <div class="hero-title">
+            <h1>Dr. Doug's Pediatric Dentistry</h1>
+            <p class="tagline">We make dentistry <span class="fun">fun</span></p>
+        </div>
 
         <div class="sky">
 
@@ -130,7 +152,7 @@
                 <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
                 <line x1="1" y1="10" x2="23" y2="10"></line>
             </svg>
-            Make a Payment
+            <span>Make a Payment</span>
         </a>
         <a href="/assets/files/New Patient Registration and policies.pdf" class="link btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -141,7 +163,7 @@
                 <line x1="20" y1="8" x2="20" y2="14"></line>
                 <line x1="23" y1="11" x2="17" y2="11"></line>
             </svg>
-            New Patient Form
+            <span>New Patient Form</span> 
         </a>
         <a href="/assets/files/Medical History.pdf" class="link btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -153,14 +175,14 @@
                 <line x1="16" y1="17" x2="8" y2="17"></line>
                 <line x1="10" y1="9" x2="8" y2="9"></line>
             </svg>
-            Medical History Form
+            <span>Medical History Form</span>
         </a>
     </div>
 
     <nav>
         <ul>
-            <li><a href="#about">About</a></li>
             <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#procedures">Procedures</a></li>
             <li><a href="#faq">FAQ</a></li>
         </ul>
@@ -170,42 +192,15 @@
     </div> -->
 
     <main>
-
-        <div class="bubbles2">
-        <section class="section" id="about">
-            <div class="text-center">
-                <img class="w-100 rotate-left" loading="lazy" src="/assets/images/DrDoug-and-family.jpg" title="Boy smiling" alt="">
-            </div>
-            <div class="content">
-                <h2>About Dr. Doug</h2>
-                <p>Dr. K. Douglas Fryer, a.k.a. “Dr. Doug” was raised here in Utah. He attended Utah State University
-                    and is an avid Aggie basketball and track fan. He then attended The Ohio State University for dental
-                    school and became an avid Buckeye football fan. After dental school he finished a two year Pediatric
-                    Dentistry residency in order to specialize in working with children.</p>
-                <p>Dr. Doug is a Diplomate of the American Board of Pediatric Dentistry. Dr. Doug lives in Logan with
-                    his wife and children. He says every day is a great day at work. He believes that kids do a great
-                    job in his office and that makes his job a success. He is thankful to work with great staff, sweet
-                    parents and Super Kids. </p>
-            </div>
-        </section>
-        <section class="section">
-            <div class="content">
-                <h2>About Our Office</h2>
-                <p>Our office is designed for kids to have some fun and relax!</p>
-                <p>Dr. Doug is easy going and has extra training in caring for infants, children and adolescents. You
-                    can see our staff members choose to work in a laid back pediatric dental office because they like
-                    pampering children and want to cater to their needs.</p>
-                <p>These elements combine to make your child feel relaxed and special.</p>
-            </div>
-            <div class="text-center">
-                <img class="w-100 rotate-right" loading="lazy" src="/assets/images/DrDougJune-36.jpg" title="Boy playing connect 4"
-                    alt="">
-            </div>
-        </section>
-        </div>
-
+        <a href="#top" id="btt-btn" class="hide" title="back to top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            >
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </a>
         <section id="location">
-            <h2 class="text-center">Our Location</h2>
+            <h2 class="text-center mt-3">Our Location</h2>
             <div class="map-container">
                 <img class="map-item" src='./assets/images/DrDougJuly.jpg' alt=''>
                 <div class="map-item" id="mapid"></div>
@@ -260,10 +255,6 @@
 
         <section id="pricing">
             <h2 class="mt-4 text-center">Dr. Doug's Small Smiles Club</h2>
-            <p>At Dr. Doug’s Pediatric Dentistry, we follow the Standard of Care outlined by the
-                American Dental Association which recommends a Cleaning
-                every 6 months as soon as you have teeth.
-            </p>
             <p><b>Don’t skip over your child’s Dental Health because you don’t have Dental Insurance!</b>
                 We offer significant discounts for preventive services so
                 you can get check-ups, cleanings, & x-rays at a great price!
@@ -331,9 +322,41 @@
             </div>
         </section>
 
+        <div class="bubbles2">
+        <section class="section" id="about">
+            <div class="text-center">
+                <img class="w-100 rotate-left" loading="lazy" src="/assets/images/DrDoug-and-family.jpg" title="Boy smiling" alt="">
+            </div>
+            <div class="content">
+                <h2>About Dr. Doug</h2>
+                <p>Dr. K. Douglas Fryer, a.k.a. “Dr. Doug” was raised here in Utah. He attended Utah State University
+                    and is an avid Aggie basketball and track fan. He then attended The Ohio State University for dental
+                    school and became an avid Buckeye football fan. After dental school he finished a two year Pediatric
+                    Dentistry residency in order to specialize in working with children.</p>
+                <p>Dr. Doug is a Diplomate of the American Board of Pediatric Dentistry. Dr. Doug lives in Logan with
+                    his wife and children. He says every day is a great day at work. He believes that kids do a great
+                    job in his office and that makes his job a success. He is thankful to work with great staff, sweet
+                    parents and Super Kids. </p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="content">
+                <h2>About Our Office</h2>
+                <p>Our office is designed for kids to have some fun and relax!</p>
+                <p>Dr. Doug is easy going and has extra training in caring for infants, children and adolescents. You
+                    can see our staff members choose to work in a laid back pediatric dental office because they like
+                    pampering children and want to cater to their needs.</p>
+                <p>These elements combine to make your child feel relaxed and special.</p>
+            </div>
+            <div class="text-center">
+                <img class="w-100 rotate-right" loading="lazy" src="/assets/images/DrDougJune-36.jpg" title="Boy playing connect 4"
+                    alt="">
+            </div>
+        </section>
+        </div>
 
         <section>
-            <h2 id="services" class="text-center mt-4">Services & Procedures</h2>
+            <h2 id="procedures" class="text-center mt-4">Services & Procedures</h2>
 
             <div class="mx-2 mt-4">
                 <img class="m-auto block" width="100%" src="/assets/images/logan-regional.png" alt="Logan Regional Hospital">
@@ -589,6 +612,7 @@
     </footer>
 
     <script src="/assets/script.js"></script>
+    <script src="/assets/btt-btn.js"></script>
 </body>
 
 </html>
