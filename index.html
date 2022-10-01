@@ -25,7 +25,6 @@
 
     <script src="/assets/elm.js"></script>
     <script src="/assets/accordion.js"></script>
-
 </head>
 
 <body>
@@ -124,7 +123,16 @@
         </div>
     </div>
     <div class="quick-nav">
-        <a href="/assets/files/DrDoug-New-Patient-Form.pdf" class="link btn">
+        <a href="/payment" class="link btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather-credit-card">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                <line x1="1" y1="10" x2="23" y2="10"></line>
+            </svg>
+            Make a Payment
+        </a>
+        <a href="/assets/files/New Patient Registration and policies.pdf" class="link btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="feather-new-person">
@@ -135,7 +143,7 @@
             </svg>
             New Patient Form
         </a>
-        <a href="/assets/files/DrDoug-Medical-History-Form.pdf" class="link btn">
+        <a href="/assets/files/Medical History.pdf" class="link btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="feather-form">
@@ -147,39 +155,42 @@
             </svg>
             Medical History Form
         </a>
-        <!-- <a href="/payment" class="link btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather-credit-card">
-                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                <line x1="1" y1="10" x2="23" y2="10"></line>
-            </svg>
-            Make a Payment
-        </a> -->
     </div>
 
     <nav>
         <ul>
-            <li><a href="#drdoug">About Dr. Doug</a></li>
-            <li><a href="#about">About The Office</a></li>
-            <li><a href="#services">Services & Procedures</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#procedures">Procedures</a></li>
             <li><a href="#faq">FAQ</a></li>
         </ul>
     </nav>
 
-    <div class="bubbles">
-        <div class="map-container">
-            <img class="map-item" src='./assets/images/DrDougJuly.jpg' alt=''>
-            <div class="map-item" id="mapid"></div>
-            <div class="border-none bold p-2">Office Hours: Monday - Thursday, 9AM to 5PM</div>
-        </div>
-    </div>
+    <!-- <div class="bubbles">
+    </div> -->
 
     <main>
 
+        <div class="bubbles2">
+        <section class="section" id="about">
+            <div class="text-center">
+                <img class="w-100 rotate-left" loading="lazy" src="/assets/images/DrDoug-and-family.jpg" title="Boy smiling" alt="">
+            </div>
+            <div class="content">
+                <h2>About Dr. Doug</h2>
+                <p>Dr. K. Douglas Fryer, a.k.a. “Dr. Doug” was raised here in Utah. He attended Utah State University
+                    and is an avid Aggie basketball and track fan. He then attended The Ohio State University for dental
+                    school and became an avid Buckeye football fan. After dental school he finished a two year Pediatric
+                    Dentistry residency in order to specialize in working with children.</p>
+                <p>Dr. Doug is a Diplomate of the American Board of Pediatric Dentistry. Dr. Doug lives in Logan with
+                    his wife and children. He says every day is a great day at work. He believes that kids do a great
+                    job in his office and that makes his job a success. He is thankful to work with great staff, sweet
+                    parents and Super Kids. </p>
+            </div>
+        </section>
         <section class="section">
             <div class="content">
-                <h2 id="about">About Our Office</h2>
+                <h2>About Our Office</h2>
                 <p>Our office is designed for kids to have some fun and relax!</p>
                 <p>Dr. Doug is easy going and has extra training in caring for infants, children and adolescents. You
                     can see our staff members choose to work in a laid back pediatric dental office because they like
@@ -187,36 +198,151 @@
                 <p>These elements combine to make your child feel relaxed and special.</p>
             </div>
             <div class="text-center">
-                <img class="w-100" loading="lazy" src="/assets/images/DrDougJune-36.jpg" title="Boy playing connect 4"
+                <img class="w-100 rotate-right" loading="lazy" src="/assets/images/DrDougJune-36.jpg" title="Boy playing connect 4"
                     alt="">
             </div>
         </section>
+        </div>
+
+        <section id="location">
+            <h2 class="text-center">Our Location</h2>
+            <div class="map-container">
+                <img class="map-item" src='./assets/images/DrDougJuly.jpg' alt=''>
+                <div class="map-item" id="mapid"></div>
+            </div>
+        </section>
+
+        <section id="hours">
+            <h2 class="text-center">Hours</h2>
+            <div class="table-wrapper">
+            <table class="hours-table text-left m-auto">
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>AM: Surgeries @LRH</td>
+                        <td>PM: 1:00-4:30</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>AM: 7:30-11:30</td>
+                        <td>PM: 1:00-4:30</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>AM: 7:30-11:30</td>
+                        <td>PM: 1:00-4:30</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>AM: 7:30-11:30</td>
+                        <td>PM: 1:00-4:30</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>CLOSED</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>CLOSED</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>CLOSED</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </section> 
 
 
-        <section class="bubbles2">
-            <div class="section">
-                <div class="text-center">
-                    <img class="w-100" loading="lazy" src="/assets/images/DrDoug-and-family.jpg" title="Boy smiling" alt="">
-                </div>
-                <div class="content">
-                    <h2 id="drdoug">About Dr. Doug</h2>
-                    <p>Dr. K. Douglas Fryer, a.k.a. “Dr. Doug” was raised here in Utah. He attended Utah State University
-                        and is an avid Aggie basketball and track fan. He then attended The Ohio State University for dental
-                        school and became an avid Buckeye football fan. After dental school he finished a two year Pediatric
-                        Dentistry residency in order to specialize in working with children.</p>
-                    <p>Dr. Doug is a Diplomate of the American Board of Pediatric Dentistry. Dr. Doug lives in Logan with
-                        his wife and children. He says every day is a great day at work. He believes that kids do a great
-                        job in his office and that makes his job a success. He is thankful to work with great staff, sweet
-                        parents and Super Kids. </p>
-                </div>
+        <section id="pricing">
+            <h2 class="text-center">Dr. Doug's Small Smiles Club</h2>
+            <p>At Dr. Doug’s Pediatric Dentistry, we follow the Standard of Care outlined by the
+                American Dental Association which recommends a Cleaning
+                every 6 months as soon as you have teeth.
+            </p>
+            <p><b>Don’t skip over your child’s Dental Health because you don’t have Dental Insurance!</b>
+                We offer significant discounts for preventive services so
+                you can get check-ups, cleanings, & x-rays at a great price!
+            </p>
+            <p><a class="link btn" href="/assets/files/Small Smiles Club sign up sheet.pdf">Learn More</a></p>
+
+            <h3 class="mt-3">Small Smiles Regular Cleanings</h3>
+            <div class="table-wrapper">
+            <table class="m-auto w-40">
+                <thead>
+                    <th>Age</th>
+                    <th>Each Visit <br> Discount Price</th>
+                    <th>Annual <br> Discount Price</th>
+                    <th>Each Visit <br> Full Price</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-left">0-2 years old</td>
+                        <td>$90</td>
+                        <td>$180</td>
+                        <td>$200-$215</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">3-6 years old</td>
+                        <td>$115</td>
+                        <td>$230</td>
+                        <td>$200-$286</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">7+ years old</td>
+                        <td>$145</td>
+                        <td>$290</td>
+                        <td>$200-$323</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <h3 class="mt-3">Small Smiles Emergency Appointments</h3>
+            <div class="table-wrapper">
+                <table class="m-auto">
+                    <thead>
+                        <th>Service</th>
+                        <th>Discount Price</th>
+                        <th>Full Price</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-left">Exam Only</td>
+                            <td>$55</td>
+                            <td>$80</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Exam w/1 x-ray</td>
+                            <td>$75</td>
+                            <td>$106</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Exam w/full set of x-rays</td>
+                            <td>$100</td>
+                            <td>$166</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
 
         <section>
-            <h2 id="services" class="text-center">Services & Procedures</h2>
+            <h2 id="services" class="text-center mt-4">Services & Procedures</h2>
 
-            <div class="products text-center mt-4">
+            <div class="mx-2 mt-4">
+                <img class="m-auto block" width="100%" src="/assets/images/logan-regional.png" alt="Logan Regional Hospital">
+                <div class="measure m-auto bold p-2 text-center">
+                    Logan Regional Hospital
+                </div>
+            </div>
+
+            <!-- <div class="products text-center mt-4">
                 <div>
                     <img height="300" width="300" src="/assets/images/isodry.jpg" alt="">
                     <div>
@@ -230,7 +356,7 @@
                         <p>We don't have to numb our patients for many of our procedures. However, when we do, we use our amazing AnutraMedical buffered anesthetic system. It provides a less painful, more comfortable numbing experience. Buffered anesthetic has been clinically shown to provide less painful, faster acting and more profound anesthesia. A true game changer for our patients who need to get numb. </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="accordion-outer mt-4">
                 <div class="accordion">
@@ -270,13 +396,6 @@
                     </div>
                 </div>
             </div>  
-
-            <div class="mx-2 mt-4">
-                <img class="m-auto block" width="100%" src="/assets/images/logan-regional.png" alt="">
-                <div class="measure m-auto bold p-2 text-center">
-                    Logan Regional Hospital
-                </div>
-            </div>
         </section>
 
         <section>
@@ -404,7 +523,7 @@
                         <span>drdoug@drdougspediatrics.com</span>
                     </a>
                 </li>
-                <li class="flex items-center hours">
+                <!-- <li class="flex items-center hours">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill=""
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="feather-clock">
@@ -412,11 +531,11 @@
                         <polyline points="12 6 12 12 16 14"></polyline>
                     </svg>
                     Monday - Thursday 9AM to 5PM
-                </li>
+                </li> -->
             </ul>
             <ul>
                 <li>
-                    <a href="/assets/files/DrDoug-New-Patient-Form.pdf">
+                    <a href="/assets/files/New Patient Registration and policies.pdf">
                         <svg class="fill-cream" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="--darkreader-inline-fill: none; --darkreader-inline-stroke: currentColor;" data-darkreader-inline-fill="" data-darkreader-inline-stroke="">
                             <path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"></path>
                             <polyline points="14 2 14 8 20 8"></polyline>
@@ -427,7 +546,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/assets/files/DrDoug-Medical-History-Form.pdf">
+                    <a href="/assets/files/Medical History.pdf">
                         <svg class="fill-cream" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="--darkreader-inline-fill: none; --darkreader-inline-stroke: currentColor;">
                             <path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"></path>
                             <polyline points="14 2 14 8 20 8"></polyline>
