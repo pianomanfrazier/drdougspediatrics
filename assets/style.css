@@ -19,6 +19,7 @@
     --color-dark-red: #c54d57;
     --color-purple: #9d4ed5;
     --color-white: #eaf7ff;
+    --color-light-white: #fafdff;
     --color-dark: #303636;
     --color-darkish: #414949;
     --text-light: var(--color-white);
@@ -676,7 +677,14 @@ footer {
 /* TABLE STYLES */
 .table-wrapper {
     overflow-x: auto;
-
+    padding: 0 4px;
+}
+.table-inner-wrapper {
+    border-radius: 8px;
+    border: 1px solid var(--color-light-grey);
+    background-color: var(--color-light-white);
+    width: 30em;
+    margin: auto;
 }
 table {
     width: 30em;
@@ -688,8 +696,14 @@ td {
     border-top: 1px solid var(--color-light-grey);
     padding: 0.7em;
 }
-tr:last-child td {
+tr:first-child td {
     border-bottom: 1px solid var(--color-light-grey);
+}
+thead th {
+    height: 3em;
+}
+.no-top-border td {
+    border-top: none;
 }
 
 /* UTILITY CLASSES */
