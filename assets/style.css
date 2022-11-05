@@ -1,5 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&family=Roboto&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@900&family=Roboto&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@900&family=Roboto&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Rammetto+One&family=Roboto&display=swap'); */
 /* COLORS */
 :root {
@@ -18,8 +19,8 @@
     --color-red-light: hsl(0, 100%, 85%);
     --color-dark-red: #c54d57;
     --color-purple: #9d4ed5;
-    --color-white: #eaf7ff;
-    --color-light-white: #fafdff;
+    --color-white: #eaeaea;
+    --color-light-white: #fafafa;
     --color-dark: #303636;
     --color-darkish: #414949;
     --text-light: var(--color-white);
@@ -37,17 +38,23 @@ body {
     color: var(--text-dark);
     overflow-x: hidden;
     font-size: 1.1em;
+    background-color: #fff;
 }
 p {
     line-height: 1.6rem;
 }
 h1, h2, h3, h4 {
     font-family: "Catamaran", sans-serif;
+    /* font-family: "Arima Madurai", sans-serif; */
     font-weight: 700;
-    color: var(--text-darkish);
 }
 h1 {
-    font-size: 2.1em;
+    font-size: 1.7em;
+}
+.tagline {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 1.0em;
 }
 h2 {
     font-size: 2.1em;
@@ -58,6 +65,14 @@ h2 {
 .fun {
     transform: rotate(-30deg);
     display: inline-block;
+}
+@media screen and (min-width: 830px) {
+    h1 {
+        font-size: 3em; 
+    }
+    .tagline {
+        font-size: 2.1em;
+    }
 }
 
 /* ICON COLORS */
@@ -89,7 +104,7 @@ h1 {
     text-transform: uppercase;
 }
 .link.btn:hover {
-    opacity: 0.9;
+    background: #5b6767;
 }
 #btt-btn {
     position: fixed;
@@ -115,6 +130,10 @@ h1 {
 }
 #btt-btn.show {
     opacity: 100%;
+}
+.top-bar {
+    background: rgba(255, 255, 255, 0.4);
+    text-align: left;
 }
 /* TOP BAR WITH PHONE, EMAIL, AND LANGUAGE */
 .top-bar a {
@@ -143,6 +162,29 @@ h1 {
     width: 100%;
 }
 
+#video-container {
+    background-color: rgba(182, 182, 182, 0.6);
+
+    position: relative;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#video-container > * {
+    width: 100vw;
+}
+video {
+    position: absolute;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index:-1;
+  }
 
 /* SITE NAVIGATION */
 nav {
@@ -171,11 +213,7 @@ nav a:active, nav a:hover {
     text-align: center;
 }
 .hero-title {
-}
-.tagline {
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 700;
-    font-size: 1.3em;
+    margin: 4em 0 6em 0;
 }
 .section {
     max-width: 90em;
@@ -508,6 +546,9 @@ td {
 }
 tr:first-child td {
     border-bottom: 1px solid var(--color-light-grey);
+}
+thead {
+    background-color: hsl(0, 0%, 98%);
 }
 thead th {
     height: 3em;
