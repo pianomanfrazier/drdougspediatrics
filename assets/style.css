@@ -30,11 +30,10 @@
     --shadow: 3px 5px 2px rgb(0 0 0 / 0.4);
     --btn-shadow: 3px 3px 2px rgb(0 0 0 / 0.4);
     --img-shadow: 20px 15px 22px -12px rgba(0, 0, 0, 0.5);
-    --img-border: 3px solid var(--text-dark);
+    --img-border: 1px solid var(--text-darkish);
 }
 body { 
     font-family: "Roboto", sans-serif;
-    background-color: var(--color-white);
     color: var(--text-dark);
     overflow-x: hidden;
     font-size: 1.1em;
@@ -56,39 +55,16 @@ h2 {
 .bold {
     font-weight: 600;
 }
-.tagline {
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 700;
-    font-size: 1.3em;
-}
 .fun {
     transform: rotate(-30deg);
     display: inline-block;
 }
 
 /* ICON COLORS */
+.stroke-light {
+    stroke: var(--color-white);
+}
 .fill-cream {
-    fill: var(--color-cream);
-}
-.feather-map {
-    fill: var(--color-cream);
-}
-.feather-envelope {
-    fill: var(--color-cream);
-}
-.feather-phone {
-    fill: var(--color-cream);
-}
-.feather-new-person {
-    fill: var(--color-cream);
-}
-.feather-form {
-    fill: var(--color-cream);
-}
-.feather-credit-card {
-    fill: var(--color-cream);
-}
-.feather-clock {
     fill: var(--color-cream);
 }
 
@@ -101,39 +77,30 @@ h1 {
 }
 
 .link.btn {
-    font-weight: 600;
-    border: 2px solid var(--text-dark);
+    font-weight: 700;
     padding: 12px 18px;
     margin: 0 0.5em;
     margin-bottom: 1em;
-    background: var(--color-teal);
-    color: var(--text-dark);
-    border-radius: 4px;
+    background: var(--color-darkish);
+    color: var(--color-white);
     position: relative;
-    box-shadow: var(--btn-shadow);
-    transition: 0ms;
+    transition: 10ms;
     text-decoration: none;
     text-transform: uppercase;
 }
 .link.btn:hover {
-    /* opacity: 0.9; */
-    top: 3px;
-    left: 3px;
-    box-shadow: none;
+    opacity: 0.9;
 }
 #btt-btn {
     position: fixed;
     bottom: 3px;
     right: 3px;
     z-index: 9999;
-    border: 2px solid var(--text-dark);
-    padding: 12px 18px;
+    padding: 10px 16px;
     margin: 0 0.5em;
     margin-bottom: 1em;
-    background: var(--color-teal);
-    color: var(--text-dark);
-    border-radius: 4px;
-    box-shadow: var(--btn-shadow);
+    background: var(--color-darkish);
+    color: var(--color-white);
     transition: 0ms;
     transition: opacity 200ms;
     text-decoration: none;
@@ -142,11 +109,6 @@ h1 {
 #btt-btn > svg {
     padding: 0;
     margin: 0;
-}
-#btt-btn:hover {
-    bottom: 0px;
-    right: 0px;
-    box-shadow: none;
 }
 #btt-btn.hide {
     opacity: 0%;
@@ -162,157 +124,6 @@ h1 {
     font-weight: 700;
     margin: 0 1em;
     text-decoration: none;
-}
-.top-bar {
-    border-bottom: 2px dashed var(--color-dark);
-}
-
-/* SKY ANIMATIONS */
-.sky {
-    position: relative;
-    padding: 9em 0;
-    overflow-x: hidden;
-}
-.sky > * {
-    position: absolute;
-    stroke: var(--text-dark);
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    filter: drop-shadow(var(--shadow));
-}
-#mr-golden-sun {
-    left: 70vw;
-    top: -1em;
-    z-index: 0;
-}
-#sun-spikes {
-    animation-name: sun-outer;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-    transform-origin: center;
-}
-/* MEDIUM CLOUD */
-#cloud1 {
-    left: 10vw;
-    top: 2em;
-    z-index: 2;
-    animation-name: cloud1;
-    /* animation-duration: 3s; */
-    animation-duration: 200s;
-}
-/* LARGE CLOUD */
-#cloud2 {
-    left: 70vw;
-    top: 5em;
-    z-index: 3;
-    animation-name: cloud2;
-    /* animation-duration: 3s; */
-    animation-duration: 50s;
-}
-/* SMALL CLOUD */
-#cloud3 {
-    left: -10vw;
-    top: 0;
-    z-index: 1;
-    animation-name: cloud3;
-    /* animation-duration: 3s; */
-    animation-duration: 300s;
-}
-#cloud4 {
-    left: -15em;
-    top: 2em;
-    z-index: 2;
-    animation-name: cloud4;
-    animation-duration: 200s;
-    animation-delay: 200s;
-    /* animation-duration: 3s;
-    animation-delay: 3s; */
-    animation-iteration-count: infinite;
-}
-/* LARGE CLOUD */
-#cloud5 {
-    left: -22em;
-    top: 5em;
-    z-index: 3;
-    animation-name: cloud5;
-    animation-duration: 200s;
-    animation-delay: 50s;
-    /* animation-duration: 3s;
-    animation-delay: 3s; */
-    animation-iteration-count: infinite;
-}
-/* SMALL CLOUD */
-#cloud6 {
-    left: -15em;
-    top: 0;
-    z-index: 1;
-    animation-name: cloud6;
-    animation-duration: 300s;
-    animation-delay: 300s;
-    /* animation-duration: 3s;
-    animation-delay: 3s; */
-    animation-iteration-count: infinite;
-}
-@keyframes sun-outer {
-    0% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(2deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
-@keyframes cloud1 {
-    from {
-        left: 10vw;
-    }
-    to {
-        left: 100vw;
-    }
-}
-@keyframes cloud2 {
-    from {
-        left: 70vw;
-    }
-    to {
-        left: 100vw;
-    }
-}
-@keyframes cloud3 {
-    from {
-        left: 50vw;
-    }
-    to {
-        left: 100vw;
-    }
-}
-@keyframes cloud4 {
-    from {
-        left: -15em;
-    }
-    to {
-        left: 100vw;
-    }
-}
-@keyframes cloud5 {
-    from {
-        left: -22em;
-    }
-    to {
-        left: 100vw;
-    }
-}
-@keyframes cloud6 {
-    from {
-        left: -15em;
-    }
-    to {
-        left: 100vw;
-    }
 }
 
 /* QUICK LINK BUTTONS TO FORMS AND PAYMENT */
@@ -338,8 +149,6 @@ nav {
     text-align: center;
     white-space: nowrap;
     overflow-x: auto;
-    border-top: 2px dashed var(--text-dark);
-    border-bottom: 2px dashed var(--text-dark);
 }
 nav ul {
     list-style: none;
@@ -354,20 +163,23 @@ nav a {
     font-weight: 700;
     padding: 6px 8px 0 8px;
 }
+nav a:active, nav a:hover {
+    border-bottom: 2px solid var(--text-darkish);
+}
 
 .hero {
     text-align: center;
 }
 .hero-title {
-    position: relative;
-    top: 2em;
-    margin-top: -2em;
+}
+.tagline {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 1.3em;
 }
 .section {
     max-width: 90em;
     margin: auto;
-    /* width: 100%;
-    margin: 2em 0; */
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -396,7 +208,6 @@ nav a {
 
 /* MAP */
 #mapid {
-    /* height:300px; */
     min-width: 100px;
     min-height: 300px;
 }
@@ -680,7 +491,6 @@ footer {
     padding: 0 4px;
 }
 .table-inner-wrapper {
-    border-radius: 8px;
     border: 1px solid var(--color-light-grey);
     background-color: var(--color-light-white);
     width: 30em;
