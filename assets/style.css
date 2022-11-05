@@ -335,6 +335,18 @@ nav a:active, nav a:hover {
     background: url(./bubbles2-inverse-flipped.png);
     background-size: cover;
 }
+@media only screen and (min-width: 2800px) {
+    .bubbles2 {
+        padding-top: 700px;
+        padding-bottom: 600px;
+    }
+    .bubbles2:before {
+        height: 700px;
+    }
+    .bubbles2:after {
+        height: 600px;
+    }
+}
 
 .bumps {
     position: relative;
