@@ -1,3 +1,4 @@
+// BACK TO TOP BUTTON
 const btn = document.getElementById("btt-btn")
 
 var myScrollFunc = function() {

@@ -92,7 +92,7 @@
 
     </div>
     <div class="quick-nav">
-        <a href="#" class="link btn">
+        <button id="payment-button" class="link btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="feather feather-credit-card">
@@ -100,7 +100,7 @@
                 <line x1="1" y1="10" x2="23" y2="10"></line>
             </svg>
             <span>Make a Payment</span>
-        </a>
+        </button>
         <a href="/assets/files/New Patient Registration and policies.pdf" class="link btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -590,7 +590,9 @@
         </div>
     </footer>
 
-    <script src="/assets/script.js"></script>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="/assets/payment.js"></script>
+    <script src="/assets/map.js"></script>
     <script src="/assets/btt-btn.js"></script>
 </body>
 
