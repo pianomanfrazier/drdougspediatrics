@@ -5,7 +5,10 @@ function uuidv4() {
     );
 }
 
-const LAMBDA_ENDPOINT = 'http://localhost:9000/payment'; // TODO: change to production URL
+// DEV API URL
+// const LAMBDA_ENDPOINT = 'http://localhost:9000/payment';
+// PRODUCTION API URL
+const LAMBDA_ENDPOINT = 'https://drdoug.netlify.app/.netlify/functions/payment';
 const STRIPE_PUBLISHABLE_KEY = 'pk_test_51MAx11Ec8kJgDWMnTVQ98MVsQBzf37f7bL0PnoW4APs6y9LMUhg8sfFyYjoVIQit5xhK7ylUoEoyozzzddzAJksj00asdMnQKa'
 
 const amount = 1000; // TODO: get amount from user
