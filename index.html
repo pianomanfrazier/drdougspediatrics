@@ -50,15 +50,6 @@
                 </svg>
                 <span>drdoug@drdougspediatrics.com</span>
             </a>
-            <a href="#hours">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill=""
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="feather feather-clock fill-cream">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-                Hours 
-            </a>
             <a href="#location">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -68,6 +59,15 @@
                     <line x1="15" y1="6" x2="15" y2="21"></line>
                 </svg>
                 Location
+            </a>
+            <a href="#hours">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill=""
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-clock fill-cream">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Hours 
             </a>
         </div>
         <!-- <a href="/es/">
@@ -128,8 +128,10 @@
 
     <div id="bgvid">
         <iframe
-            src="https://player.vimeo.com/video/184032225?h=3c9e2839c5&autoplay=1&loop=1&title=0&byline=0&portrait=0"
+            src="https://player.vimeo.com/video/787163025?h=4cafa55a5a&background=1&quality=720p"
             frameborder="0"
+            width="640"
+            height="360"
             allow="autoplay;"
             allowfullscreen
         ></iframe>
@@ -154,6 +156,14 @@
                 <polyline points="18 15 12 9 6 15"></polyline>
             </svg>
         </a>
+        <section>
+            <div class="m-auto measure mt-4">
+                <div class="video-wrapper">
+                    <iframe class="video-iframe" src="https://player.vimeo.com/video/786425215?h=c986aab8cf" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
         <section id="location">
             <h2 class="text-center mt-3">Our Location</h2>
             <div class="map-container">
@@ -163,7 +173,7 @@
         </section>
 
         <section id="hours">
-            <h2 class="text-center">Hours</h2>
+            <h2 class="text-center mt-3">Hours</h2>
             <div class="table-wrapper">
             <div class="table-inner-wrapper">
             <table class="hours-table text-left m-auto">
@@ -315,19 +325,18 @@
                 <!-- <img class="w-100 rotate-right" loading="lazy" src="/assets/images/DrDougJune-36.jpg" title="Boy playing connect 4"
                     alt=""> -->
                 <div class="video-wrapper rotate-right border-dark shadow">
-                    <iframe class="video-iframe" src="https://player.vimeo.com/video/184859361?h=57d86e1aa3&title=0&byline=0&portrait=0&badge=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video-iframe" src="https://player.vimeo.com/video/786426158?h=89492db143" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
         </div>
 
         <section>
-            <h2 id="procedures" class="text-center mt-4">Services & Procedures</h2>
+            <h2 id="procedures" class="text-center mt-2">Services & Procedures</h2>
 
-            <div class="mx-2 mt-4">
-                <img class="m-auto block" width="100%" src="/assets/images/logan-regional.png" alt="Logan Regional Hospital">
-                <div class="measure m-auto bold p-2 text-center">
-                    Hospital Dentistry
+            <div class="m-auto measure">
+                <div class="video-wrapper">
+                    <iframe class="video-iframe" src="https://player.vimeo.com/video/786426355?h=58699c4cf7" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -349,13 +358,26 @@
 
             <div class="accordion-outer mt-4">
                 <div class="accordion">
+                    <button class="accordion-btn" onClick="toggle('accordion-content-12', this)">
+                        <h3>Prevention</h3>
+                    </button>
+                    <div class="accordion-content" id="accordion-content-12">
+                        <div class="video-wrapper">
+                            <iframe class="video-iframe" src="https://player.vimeo.com/video/786426286?h=e29f18837c" width="640" height="360" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <button class="accordion-btn" onClick="toggle('accordion-content-12a', this)">
+                        <h3>Diagnostic Tools</h3>
+                    </button>
+                    <div class="accordion-content" id="accordion-content-12a">
+                        <div class="video-wrapper">
+                            <iframe class="video-iframe" src="https://player.vimeo.com/video/786424864?h=119e30733b" width="640" height="360" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
                     <button class="accordion-btn" onClick="toggle('accordion-content-7', this)">
                         <h3>Regular 6 month Check-up and Cleanings</h3>
                     </button>
                     <div class="accordion-content" id="accordion-content-7">
-                        <div class="video-wrapper">
-                            <iframe class="video-iframe" src="https://player.vimeo.com/video/184859361?h=57d86e1aa3&title=0&byline=0&portrait=0&badge=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                        </div>
                         <p>We specialize in patience and making cleanings fun positive experiences for the kids. We are able to do a cleaning, fluoride treatment, and x-rays on most children. Extra special care is given to small children in order to perform a thorough check up and toothbrush cleaning.</p>
                     </div>
 
@@ -363,9 +385,6 @@
                         <h3>Operative Dentistry</h3>
                     </button>
                     <div class="accordion-content" id="accordion-content-8">
-                        <div class="video-wrapper">
-                            <iframe class="video-iframe" src="https://player.vimeo.com/video/184859361?h=57d86e1aa3&title=0&byline=0&portrait=0&badge=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                        </div>
                         <p>(i.e. fillings, crowns, sealants) This is normally done with Nitrous Oxide.</p>
                     </div>
 
@@ -373,9 +392,6 @@
                         <h3>Oral Sedation Dentistry</h3>
                     </button>
                     <div class="accordion-content" id="accordion-content-9">
-                        <div class="video-wrapper">
-                            <iframe class="video-iframe" src="https://player.vimeo.com/video/184859361?h=57d86e1aa3&title=0&byline=0&portrait=0&badge=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                        </div>
                         <p>(i.e. Regular dentistry done with light sedative medications). At this appointment your child will have a personal helper assigned specifically to them. This helper will assist in giving the medications, supervise your child while medications are setting in, and assist them through their dental work. This helps gain confidence in their dental work and trust in our staff.</p>
                     </div>
 
@@ -394,30 +410,64 @@
                     </div>
                 </div>
             </div>  
+
+            <div class="mx-2 mt-4">
+                <img class="m-auto block" width="100%" src="/assets/images/logan-regional.png" alt="Logan Regional Hospital">
+                <div class="measure m-auto bold p-2 text-center">
+                    Hospital Dentistry
+                </div>
+            </div>
         </section>
 
         <section>
-            <h2 id="faq" class="text-center mt-4">F.A.Q.</h2>
+            <h2 id="faq" class="text-center mt-3">F.A.Q.</h2>
 
             <div class="accordion-outer mb-2">
                 <div class="accordion">
+                    <button class="accordion-btn" onClick="toggle('accordion-content-2', this)">
+                        <h3>When to come to the dentist?</h3>
+                    </button>
+                    <div class="accordion-content" id="accordion-content-2">
+
+                        <div class="video-wrapper">
+                            <iframe class="video-iframe" src="https://player.vimeo.com/video/786425816?h=dac20dda40" width="640" height="360" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                        <p>The American Academy of Pediatric Dentistry recommends to start coming to the dentist sometime between the time of the first tooth and one years of age. This will allow the dentist to diagnose any special oral conditions and to create a positive first visit.</p>
+                    </div>
+
+                    <button class="accordion-btn" onClick="toggle('accordion-content-1a', this)">
+                        <h3>What about lip-tie or tongue-tie?</h3>
+                    </button>
+                    <div class="accordion-content" id="accordion-content-1a">
+                        <div class="video-wrapper">
+                            <iframe class="video-iframe" src="https://player.vimeo.com/video/786426095?h=8edc9ee44d" width="640" height="360" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <button class="accordion-btn" onClick="toggle('accordion-content-4', this)">
+                       <h3>What about fluoride?</h3>
+                    </button>
+                    <div class="accordion-content" id="accordion-content-4">
+                        <div class="video-wrapper">
+                            <iframe class="video-iframe" src="https://player.vimeo.com/video/786425942?h=4dedf61117" width="640" height="360" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                        <h4>Topical Fluoride</h4>
+                        <p>Topical fluorides include toothpastes, mouth rinses and professionally applied fluoride therapies. Topical fluorides strengthen teeth already present in the mouth making them more decay resistant.</p>
+                        <p>Children over 18 months should use at most a pea size amount of fluoride toothpaste. This amount should be used until they are old enough to spit.</p>
+
+                        <h4>Systemic Fluoride</h4>
+                        <p>Fluorides that are ingested into the body and become incorporated into forming tooth structure. They include fluoridated water and dietary supplements in the form of tablets, drops, or lozenges.</p>
+                    </div>
+
                     <button class="accordion-btn" onClick="toggle('accordion-content-1', this)">
                         <h3>What to expect from our pediatric dental office</h3>
                     </button>
                     <div class="accordion-content" id="accordion-content-1">
                         <p>At “Dr Doug’s” childrens dental office in Logan, Utah, our goal is to educate children and parents in order to promote healthy bodies and beautiful teeth for those in our office.</p>
-                        <div class="video-wrapper">
-                            <iframe class="video-iframe" src="https://player.vimeo.com/video/184859361?h=57d86e1aa3&title=0&byline=0&portrait=0&badge=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                        </div>
                         <p>Our hope and goal is that we can do this in a positive fun atmosphere. We believe that with a fun place to play and people that truly care for your child we can make your visit great. We are excited to get to know each parent and child that comes into our office. We hope you enjoy getting to know us too.</p>
                         <p>As a pediatric dentist “Dr. Doug” has specialized training in the latest research in pediatric dentistry. He is versed in the most up to date restorative techniques, information, and in pediatric oral facial development.</p>
-                    </div>
-
-                    <button class="accordion-btn" onClick="toggle('accordion-content-2', this)">
-                        <h3>When to come to the dentist?</h3>
-                    </button>
-                    <div class="accordion-content" id="accordion-content-2">
-                        <p>The American Academy of Pediatric Dentistry recommends to start coming to the dentist sometime between the time of the first tooth and one years of age. This will allow the dentist to diagnose any special oral conditions and to create a positive first visit.</p>
                     </div>
 
                     <button class="accordion-btn" onClick="toggle('accordion-content-3', this)">
@@ -425,21 +475,6 @@
                     </button>
                     <div class="accordion-content" id="accordion-content-3">
                         <p>At a minimum, you should brush your toddlers teeth twice a day. Generally, you would brush your child’s teeth in the morning and before bedtime. Begin flossing when teeth began touching each other.</p>
-                    </div>
-
-                    <button class="accordion-btn" onClick="toggle('accordion-content-4', this)">
-                       <h3>What is topical fluoride?</h3>
-                    </button>
-                    <div class="accordion-content" id="accordion-content-4">
-                        <p>Topical fluorides include toothpastes, mouth rinses and professionally applied fluoride therapies. Topical fluorides strengthen teeth already present in the mouth making them more decay resistant.</p>
-                        <p>Children over 18 months should use at most a pea size amount of fluoride toothpaste. This amount should be used until they are old enough to spit.</p>
-                    </div>
-
-                    <button class="accordion-btn" onClick="toggle('accordion-content-5', this)">
-                        <h3>What is systemic fluoride?</h3>
-                    </button>
-                    <div class="accordion-content" id="accordion-content-5">
-                        <p>Fluorides that are ingested into the body and become incorporated into forming tooth structure. They include fluoridated water and dietary supplements in the form of tablets, drops, or lozenges.</p>
                     </div>
 
                     <button class="accordion-btn" onClick="toggle('accordion-content-6', this)">

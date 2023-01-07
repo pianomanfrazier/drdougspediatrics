@@ -186,6 +186,8 @@ h1 {
     bottom: 0;
     right: 0;
     z-index: -99;
+    background-image: url("/assets/images/DrDougCover.png");
+    background-size: cover;
 }
 #bgvid iframe {
     width: 100vw;
@@ -667,11 +669,15 @@ thead th {
 .mb-2 {
     margin-bottom: 1em;
 }
+.mb-4 {
+    margin-bottom: 5em;
+}
 .w-100 {
     width: 100%;
 }
 .m-auto {
-    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 .block {
     display: block;
