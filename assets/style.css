@@ -103,9 +103,15 @@ h1 {
     transition: 10ms;
     text-decoration: none;
     text-transform: uppercase;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
 }
 .link.btn:hover {
     background: #5b6767;
+}
+.link.btn:disabled {
+    background: #5b676782;
 }
 #btt-btn {
     position: fixed;
@@ -146,6 +152,62 @@ h1 {
     text-decoration: none;
 }
 
+/* Payment Modal */
+#payment-modal {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    user-select: none;
+    transition: 200ms opacity ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+#payment-modal.active {
+    opacity: 1;
+    z-index: 9999;
+}
+.modal {
+    background-color: #f5f5f7; 
+    border-radius: 6px;
+    padding: 1em;
+    position: relative;
+}
+.modal > .form-row {
+    margin-bottom: 1em;
+}
+.form-row label {
+    text-align: left;
+    display: block;
+    /* text-transform: uppercase;
+    font-size: 0.9em; */
+}
+.form-row input {
+    display: block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #cececf;
+    background-color: #fff;
+}
+#payment-button {
+    margin-top: 0.7em;
+}
+.close-btn {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    width: 22px;
+    height: 23px;
+    background: url("/assets/close.png") no-repeat;
+    background-size: auto;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
 /* QUICK LINK BUTTONS TO FORMS AND PAYMENT */
 .quick-nav {
     text-align: center;

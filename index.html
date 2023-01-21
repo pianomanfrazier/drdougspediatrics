@@ -89,10 +89,28 @@
             <h1>Dr. Doug's Pediatric Dentistry</h1>
             <p class="tagline">We make dentistry fun!</p>
         </div>
-
     </div>
+
+    <div id="payment-modal" class="modal-wrapper">
+        <div class="modal">
+            <a href="#" id="close-button" class="close-btn"></a>
+            <div class="form-row">
+                <label for="invoice-number">Invoice Number</label>
+                <input id="invoice-number" type="text">
+            </div>
+            <div class="form-row">
+                <label for="invoice-amount">Amount</label>
+                <input id="invoice-amount" type="text">
+            </div>
+            <button id="payment-button" disabled class="link btn">
+                Go To Payment &nbsp;
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+        </div>
+    </div>
+
     <div class="quick-nav">
-        <button id="payment-button" class="link btn">
+        <a href="#" id="modal-button" class="link btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="feather feather-credit-card">
@@ -100,7 +118,7 @@
                 <line x1="1" y1="10" x2="23" y2="10"></line>
             </svg>
             <span>Make a Payment</span>
-        </button>
+        </a>
         <a href="/assets/files/New Patient Registration and policies.pdf" class="link btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
