@@ -11,8 +11,8 @@ const LAMBDA_ENDPOINT = 'http://localhost:9000/payment';
 // const LAMBDA_ENDPOINT = 'https://drdoug.netlify.app/.netlify/functions/payment';
 const STRIPE_PUBLISHABLE_KEY = 'pk_test_51MAx11Ec8kJgDWMnTVQ98MVsQBzf37f7bL0PnoW4APs6y9LMUhg8sfFyYjoVIQit5xhK7ylUoEoyozzzddzAJksj00asdMnQKa'
 
-let amount = -1000; // TODO: get amount from user
-let invoiceNumber = 000;
+let amount = ""; // TODO: get amount from user
+let invoiceNumber = "";
 const description = (invoiceNumber) => 'Payment for invoice #' + invoiceNumber; // TODO: get invoice number from user
 
 const $messageBox = document.getElementById('message-box');
@@ -25,6 +25,9 @@ const $closeBtn = document.getElementById('close-button');
 
 const $invoiceNumber = document.getElementById('invoice-number');
 const $invoiceAmount = document.getElementById('invoice-amount');
+
+const validateAmount = (amount) => amount && /^\d+(?:\.\d{2})$/.test(amount.trim());
+const validateInvoiceNumber = (number) => number && number.trim().length > 2;
 
 const handler = (invoiceNumber, invoiceAmount) => StripeCheckout.configure({
   key: STRIPE_PUBLISHABLE_KEY, 
@@ -71,25 +74,42 @@ $modalBtn.addEventListener('click', () => {
 
 $invoiceNumber.addEventListener('input', (evt) => {
   const value = evt.target.value;
-  console.log(evt.target.value);
+  console.log(evt.target.value, validateInvoiceNumber(value));
   invoiceNumber = value;
 
 })
 $invoiceAmount.addEventListener('input', (evt) => {
   const value = evt.target.value;
-  console.log(evt.target.value);
-  amount = value * 100;
+  console.log(evt.target.value, validateAmount(value));
+  amount = value;
 })
 $closeBtn.addEventListener('click', () => {
   $paymentModal.classList.remove('active');
 });
 
 $paymentButton.addEventListener('click', () => {
-  $paymentModal.classList.remove('active');
+  // check if valid form
+  if (validateAmount(amount) && validateInvoiceNumber(invoiceNumber)) {
+    $invoiceAmount.classList.remove('error');
+    $invoiceNumber.classList.remove('error');
 
-  handler(invoiceNumber, amount).open({
-    amount: amount,
-    name: "Dr. Doug's Pediatric Dentistry",
-    description: description(invoiceNumber)
-  });
+    $paymentModal.classList.remove('active');
+
+    handler(invoiceNumber, amount * 100).open({
+      amount: amount * 100,
+      name: "Dr. Doug's Pediatric Dentistry",
+      description: description(invoiceNumber)
+    });
+  } else {
+    $invoiceAmount.classList.remove('error');
+    $invoiceNumber.classList.remove('error');
+    // display errors
+    if (!validateAmount(amount)) {
+      console.log(amount);
+      $invoiceAmount.classList.add('error');
+    }
+    if (!validateInvoiceNumber(invoiceNumber)) {
+      $invoiceNumber.classList.add('error');
+    }
+  }
 });
