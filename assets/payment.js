@@ -13,7 +13,7 @@ const STRIPE_PUBLISHABLE_KEY = 'pk_test_51MAx11Ec8kJgDWMnTVQ98MVsQBzf37f7bL0PnoW
 
 let amount = ""; // TODO: get amount from user
 let invoiceNumber = "";
-const description = (invoiceNumber) => 'Payment for invoice #' + invoiceNumber; // TODO: get invoice number from user
+const description = (invoiceNumber) => 'Payment for acct# ' + invoiceNumber; // TODO: get invoice number from user
 
 const $messageBox = document.getElementById('message-box');
 
@@ -27,7 +27,7 @@ const $invoiceNumber = document.getElementById('invoice-number');
 const $invoiceAmount = document.getElementById('invoice-amount');
 
 const validateAmount = (amount) => amount && /^\d+(?:\.\d{2})$/.test(amount.trim());
-const validateInvoiceNumber = (number) => number && number.trim().length > 2;
+const validateInvoiceNumber = (number) => number && /^\d{2,5}$/.test(number.trim());
 
 const handler = (invoiceNumber, invoiceAmount) => StripeCheckout.configure({
   key: STRIPE_PUBLISHABLE_KEY, 
