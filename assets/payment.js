@@ -6,10 +6,11 @@ function uuidv4() {
 }
 
 // DEV API URL
-const LAMBDA_ENDPOINT = 'http://localhost:9000/payment';
+// const LAMBDA_ENDPOINT = 'http://localhost:9000/payment';
 // PRODUCTION API URL
-// const LAMBDA_ENDPOINT = 'https://drdoug.netlify.app/.netlify/functions/payment';
-const STRIPE_PUBLISHABLE_KEY = 'pk_test_51MAx11Ec8kJgDWMnTVQ98MVsQBzf37f7bL0PnoW4APs6y9LMUhg8sfFyYjoVIQit5xhK7ylUoEoyozzzddzAJksj00asdMnQKa'
+const LAMBDA_ENDPOINT = 'https://drdoug.netlify.app/.netlify/functions/payment';
+// const STRIPE_PUBLISHABLE_KEY = 'pk_test_51MAx11Ec8kJgDWMnTVQ98MVsQBzf37f7bL0PnoW4APs6y9LMUhg8sfFyYjoVIQit5xhK7ylUoEoyozzzddzAJksj00asdMnQKa'
+const STRIPE_PUBLISHABLE_KEY = 'pk_live_51M0B4tE9w1qc3jb7BNiVdC5OIBsJpB7cQfQZjPUP8xsRrjwTU7UD8pGncXj6GxUCan38t3FvbND43dYorc5QthfK00UgXBElgR'
 
 let amount = ""; // TODO: get amount from user
 let invoiceNumber = "";
