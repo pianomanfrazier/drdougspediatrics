@@ -9,12 +9,13 @@ function uuidv4() {
 // const LAMBDA_ENDPOINT = 'http://localhost:9000/payment';
 // PRODUCTION API URL
 const LAMBDA_ENDPOINT = 'https://drdoug.netlify.app/.netlify/functions/payment';
+// DEV STRIPE KEY
 // const STRIPE_PUBLISHABLE_KEY = 'pk_test_51MAx11Ec8kJgDWMnTVQ98MVsQBzf37f7bL0PnoW4APs6y9LMUhg8sfFyYjoVIQit5xhK7ylUoEoyozzzddzAJksj00asdMnQKa'
 const STRIPE_PUBLISHABLE_KEY = 'pk_live_51M0B4tE9w1qc3jb7BNiVdC5OIBsJpB7cQfQZjPUP8xsRrjwTU7UD8pGncXj6GxUCan38t3FvbND43dYorc5QthfK00UgXBElgR'
 
-let amount = ""; // TODO: get amount from user
+let amount = "";
 let invoiceNumber = "";
-const description = (invoiceNumber) => 'Payment for acct# ' + invoiceNumber; // TODO: get invoice number from user
+const description = (invoiceNumber) => 'Payment for acct# ' + invoiceNumber;
 
 const $messageBox = document.getElementById('message-box');
 
@@ -64,8 +65,6 @@ const handler = (invoiceNumber, invoiceAmount) => StripeCheckout.configure({
       ? 'Charge was successful!'
       : 'Charge failed.'
     $messageBox.querySelector('h2').innerHTML = message;
-
-    console.log(data);
   }
 });
 
@@ -75,13 +74,11 @@ $modalBtn.addEventListener('click', () => {
 
 $invoiceNumber.addEventListener('input', (evt) => {
   const value = evt.target.value;
-  console.log(evt.target.value, validateInvoiceNumber(value));
   invoiceNumber = value;
 
 })
 $invoiceAmount.addEventListener('input', (evt) => {
   const value = evt.target.value;
-  console.log(evt.target.value, validateAmount(value));
   amount = value;
 })
 $closeBtn.addEventListener('click', () => {
@@ -96,8 +93,9 @@ $paymentButton.addEventListener('click', () => {
 
     $paymentModal.classList.remove('active');
 
-    handler(invoiceNumber, amount * 100).open({
-      amount: amount * 100,
+    const fmtAmount = parseInt(amount.replace('.', ''))
+    handler(invoiceNumber, fmtAmount).open({
+      amount: fmtAmount,
       name: "Dr. Doug's Pediatric Dentistry",
       description: description(invoiceNumber)
     });
@@ -106,7 +104,6 @@ $paymentButton.addEventListener('click', () => {
     $invoiceNumber.classList.remove('error');
     // display errors
     if (!validateAmount(amount)) {
-      console.log(amount);
       $invoiceAmount.classList.add('error');
     }
     if (!validateInvoiceNumber(invoiceNumber)) {
