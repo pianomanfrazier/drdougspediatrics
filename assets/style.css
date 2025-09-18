@@ -231,6 +231,21 @@ input.error {
     font-weight: bold;
 }
 
+.banner {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: var(--color-yellow-light);
+}
+.banner a {
+    padding: 0.3em 0;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+}
+
 #video-container {
     background-color: rgba(182, 182, 182, 0.6);
 
@@ -722,6 +737,9 @@ thead th {
 }
 .mt-4 {
     margin-top: 5em;
+}
+.pt-1 {
+    padding-top: 1em;
 }
 .p-2 {
     padding: 1em;
