@@ -242,8 +242,14 @@ input.error {
     text-decoration: none;
     color: black;
     text-align: center;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
+}
+.banner svg {
+    padding: 0 0.7em;
+    fill: var(--color-yellow);
 }
 
 #video-container {
