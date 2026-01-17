@@ -1,0 +1,96 @@
+<!DOCTYPE html> <html lang="en">
+<head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="author" content="Dr. Doug Fryer">
+    <meta name="description"
+        content="Our office is designed for kids to have some fun and relax! Dr. Doug is easy going and has extra training in caring for infants, children and adolescents.">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+        integrity="sha256-t2/7smZfgrST4FS1DT0bs/KotCM74XlcqZN5Vu7xlrw=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.svg">
+        <style>
+        /* Back button */
+        .back-btn {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 99999;
+
+            display: inline-flex;
+            align-items: center;
+
+            padding: 10px 14px;
+            border-radius: 8px;
+
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            color: #111;
+        }
+        .back-btn:hover { transform: translateY(-1px); }
+        .back-btn:active { transform: translateY(0); }
+        .back-btn:focus-visible {
+            outline: 3px solid rgba(0, 120, 255, 0.45);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <a class="back-btn" href="/" aria-label="Back to main site">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-chevron-left-icon lucide-chevron-left">
+            <path d="m15 18-6-6 6-6" />
+        </svg>
+        Home
+    </a>
+
+    <h1>Payment Plans</h1>
+    
+    <!-- CHERRY WIDGET BEGIN --> 
+    <script>
+        (function (w, d, s, o, f, js, fjs) {
+            w[o] = w[o] || function () {
+                (w[o].q = w[o].q || []).push(arguments);
+            };
+            (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+            js.id = o;
+            js.src = f;
+            js.async = 1;
+            fjs.parentNode.insertBefore(js, fjs);
+        })(window, document, "script", "_hw", "https://files.withcherry.com/widgets/widget.js");
+        _hw("init", {
+            debug: false,
+            variables: {
+                slug: 'dr-doug-s-pediatric-dentistry',
+                name: "Dr Doug's Pediatric Dentistry",
+                images: [21],
+                customLogo: '',
+                defaultPurchaseAmount: 2000,
+                customImage: '/assets/images/gallery/DrDougJuly-50.jpg',
+                imageCategory: 'dental',
+                language: 'en',
+            },
+            styles: {
+                primaryColor: '#414949',
+                secondaryColor: '#41494910',
+                fontFamily: 'Roboto',
+                headerFontFamily: 'Catamaran',
+            }
+        }, ['hero', 'calculator', 'howitworks', 'faq']); 
+    </script>
+    <div id="all"></div> 
+    <div id="hero"></div> 
+    <div id="calculator"></div> 
+    <div id="howitworks"></div> 
+    <div id="testimony"></div> 
+    <div id="faq"></div> 
+    <!-- CHERRY WIDGET END -->
+</body>
+</html>
