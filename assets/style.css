@@ -305,6 +305,11 @@ input.error {
     border: 0;
 }
 
+#reviews {
+    margin: auto;
+    max-width: 40em;
+}
+
 /* SITE NAVIGATION */
 nav {
     text-align: center;
@@ -737,6 +742,9 @@ thead th {
 }
 .measure {
     max-width: 45em;
+}
+.mt-minus {
+    margin-top: -1em;
 }
 .mt-3 {
     margin-top: 3em;
